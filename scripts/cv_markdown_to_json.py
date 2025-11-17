@@ -110,6 +110,21 @@ def extract_author_info(config):
         # Add social profiles
         profiles = []
         
+        # Priority profiles
+        if author.get('linkedin'):
+            profiles.append({
+                "network": "LinkedIn",
+                "username": author.get('linkedin'),
+                "url": f"https://www.linkedin.com/in/{author.get('linkedin')}"
+            })
+
+        if author.get('github'):
+            profiles.append({
+                "network": "GitHub",
+                "username": author.get('github'),
+                "url": f"https://github.com/{author.get('github')}"
+            })
+
         # Academic profiles
         if author.get('googlescholar'):
             profiles.append({
@@ -133,20 +148,7 @@ def extract_author_info(config):
             })
         
         # Social media profiles
-        if author.get('github'):
-            profiles.append({
-                "network": "GitHub",
-                "username": author.get('github'),
-                "url": f"https://github.com/{author.get('github')}"
-            })
-        
-        if author.get('linkedin'):
-            profiles.append({
-                "network": "LinkedIn",
-                "username": author.get('linkedin'),
-                "url": f"https://www.linkedin.com/in/{author.get('linkedin')}"
-            })
-        
+                
         if author.get('twitter'):
             profiles.append({
                 "network": "Twitter",
