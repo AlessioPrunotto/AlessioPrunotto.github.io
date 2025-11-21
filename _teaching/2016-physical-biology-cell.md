@@ -1,5 +1,5 @@
 ---
-title: "physical biology of the cell II"
+title: "Physical Biology of the Cell II"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2016-physical-biology-cell

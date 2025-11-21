@@ -4,7 +4,7 @@ collection: teaching
 type: "Graduate course"
 permalink: /teaching/2016to2019-biomolecular-structure-and-mechanics
 venue: "EPFL, School of Life Sciences"
-date: from 2016 to 2019
+date: 20162019
 location: "Lausanne, Switzerland"
 ---
 
