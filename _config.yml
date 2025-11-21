@@ -26,7 +26,7 @@ author:
   avatar           : "profile-photo.png"
   name             : "Alessio Prunotto"
   pronouns         : "he/him"  
-  bio              : "I'm a computational chemist and drug design enthusiast. I develop predictive models to support drug discovery."
+  bio              : "I'm a computational chemist and drug design enthusiast. I develop cheminformatics tools to support drug discovery."
   location         : "Zurich, Switzerland"
   employer         : # URL
   uri              : # URL
