@@ -50,11 +50,13 @@ Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
 Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
 **Key responsibilities:**
+
 Structural characterization of two peripheral membrane proteins, respectively involved in antibiotic multiresistance (NDM-1) and cancer (Golph3). In details:
   - Characterize the membrane binding mechanism of the 2 proteins
   - Assess the molecular bases that determine the different functional behaviour of homologous proteins
   - Identify potential allosteric sites
   - Use the computational data to propose validation experiments
+
 Assist numerous experimental projects with molecular modeling, in particular:
   - Provide molecular explanations of high-level experimental observations (ex: viral capsids thermostability, ligand selectivity, etc.)
   - Test hypothesis that origin from wet-lab experiments
