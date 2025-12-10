@@ -17,13 +17,15 @@ Education
 
 Work experience
 ======
-* 08-2025 / present: Chemical Data Scientist at [Synple Chem](https://www.synplechem.com/) (Zurich, Switzerland)
-  * Symple Chem provides automated technology for fast and efficient synthesis of small molecules.
-  * My duties include:
-    * Developing and validating predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
+### Chemical Data Scientist - [Synple Chem](https://www.synplechem.com/) (Zurich, Switzerland)
+*08-2025 → present*
+Symple Chem develops automated technology for small molecule synthesis.
+**Key responsibilities:**
+    * Build and validate predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
     * Developing and validating predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
 
-* 02-2022 / 07-2025: Drug Hunter / Computational Chemist at [Aqemia](https://www.aqemia.com/) (Paris, France)
+### Drug Hunter / Computational Chemist - [Aqemia](https://www.aqemia.com/) (Paris, France)
+*02-2022 / 07-2025*
   * Aqemia is a pharmatech startup that leverages machine learning and molecular models to expedite the drug discovery process and generate novel drug candidates.
   * My duties included:
     * Participate in early stage drug discovery projects, i.e. searching novel small molecules for medical targets, by means of protein modelling, molecular docking, molecular dynamics and similar computational methods. Usage of structure-based approaches and evaluation of protein-ligand interactions
