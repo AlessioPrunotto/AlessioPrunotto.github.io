@@ -19,10 +19,12 @@ Work experience
 ======
 ### Chemical Data Scientist - [Synple Chem](https://www.synplechem.com/) (Zurich, Switzerland)
 *08-2025 → present*
+
 Symple Chem develops automated technology for small molecule synthesis.
+
 **Key responsibilities:**
-    * Build and validate predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
-    * Developing and validating predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
+ - Build and validate predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
+ - Developing and validating predictive models (both physics-based and ML-based) for chemical reactivity and solubility, to guide automated synthesis workflows
 
 ### Drug Hunter / Computational Chemist - [Aqemia](https://www.aqemia.com/) (Paris, France)
 *02-2022 / 07-2025*
