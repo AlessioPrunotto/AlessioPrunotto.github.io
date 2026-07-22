@@ -412,3 +412,91 @@ html[data-theme="dark"] {
     animation: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   CV page readability improvements
+   -------------------------------------------------------------------------- */
+
+.cv-modern {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.cv-modern .cv-block {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--global-border-color);
+  border-left-width: 6px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.08) 0%, rgba(148, 163, 184, 0.02) 100%);
+}
+
+.cv-modern .cv-block--education {
+  border-left-color: #0ea5e9;
+}
+
+.cv-modern .cv-block--experience {
+  border-left-color: #0ea5a4;
+}
+
+.cv-modern .cv-block--skills {
+  border-left-color: #f59e0b;
+}
+
+.cv-modern h2 {
+  margin: 0 0 0.8rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+  letter-spacing: 0.02em;
+}
+
+.cv-modern h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--global-border-color);
+  line-height: 1.35;
+}
+
+.cv-modern h2 + h3 {
+  margin-top: 0.4rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cv-modern p em {
+  color: var(--global-text-color-light);
+  font-weight: 600;
+}
+
+.cv-modern .cv-block--education ul {
+  margin: 0;
+}
+
+.cv-modern .cv-block--skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-modern .cv-block--skills li {
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+html[data-theme="dark"] .cv-modern .cv-block {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.45) 100%);
+}
+
+html[data-theme="dark"] .cv-modern .cv-block--skills li {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.18);
+}
