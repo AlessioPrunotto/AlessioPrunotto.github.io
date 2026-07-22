@@ -239,14 +239,14 @@ html[data-theme="dark"] {
   animation-delay: 0.2s;
 
   @media screen and (min-width: $sidebar-screen-min-width) {
-    margin-left: calc(#{$sidebar-link-max-width} + 2rem);
+    margin-left: calc(#{$sidebar-link-max-width} + 3rem);
     margin-right: auto;
-    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 2rem);
+    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 3rem);
   }
 
   @media screen and (min-width: 1500px) {
-    margin-left: calc(#{$sidebar-link-max-width} + 3rem);
-    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 3rem);
+    margin-left: calc(#{$sidebar-link-max-width} + 4rem);
+    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 4rem);
   }
 }
 
