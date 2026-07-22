@@ -1,0 +1,403 @@
+/* ==========================================================================
+   MOLECULAR THEME — custom palette, hero, micro-interactions
+   ========================================================================== */
+
+:root {
+  --molecular-cyan: #06b6d4;
+  --molecular-cyan-dark: #0891b2;
+  --molecular-purple: #8b5cf6;
+  --molecular-amber: #f59e0b;
+  --molecular-navy: #0f172a;
+  --molecular-gradient: linear-gradient(135deg, var(--molecular-cyan) 0%, var(--molecular-purple) 100%);
+  --molecular-shadow: 0 8px 30px rgba(6, 182, 212, 0.12);
+  --molecular-shadow-hover: 0 14px 40px rgba(139, 92, 246, 0.18);
+}
+
+html[data-theme="dark"] {
+  --molecular-shadow: 0 8px 30px rgba(6, 182, 212, 0.08);
+  --molecular-shadow-hover: 0 14px 40px rgba(139, 92, 246, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Masthead — animated gradient bar
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.02) 0%,
+    rgba(6, 182, 212, 0.07) 45%,
+    rgba(139, 92, 246, 0.06) 100%
+  );
+  background-size: 200% 200%;
+
+  html[data-theme="dark"] & {
+    background: linear-gradient(
+      120deg,
+      rgba(15, 23, 42, 0.98) 0%,
+      rgba(6, 182, 212, 0.1) 45%,
+      rgba(139, 92, 246, 0.08) 100%
+    );
+    background-size: 200% 200%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: molecular-gradient-shift 14s ease infinite;
+  }
+
+  &::after {
+    height: 2px;
+    background: var(--molecular-gradient);
+    opacity: 0.55;
+  }
+}
+
+.masthead__menu-item,
+.greedy-nav {
+  background-color: transparent;
+}
+
+@keyframes molecular-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Nav underline slide */
+.greedy-nav .visible-links li a {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.35rem;
+    height: 2px;
+    background: var(--molecular-gradient);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Author avatar — gradient ring
+   -------------------------------------------------------------------------- */
+
+.author__avatar img {
+  border: 3px solid transparent;
+  background:
+    linear-gradient(var(--global-bg-color), var(--global-bg-color)) padding-box,
+    var(--molecular-gradient) border-box;
+  box-shadow: var(--molecular-shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  @include breakpoint($large) {
+    padding: 4px;
+    border: 3px solid transparent;
+  }
+}
+
+.sidebar:hover .author__avatar img,
+.author__avatar img:focus-visible {
+  box-shadow: var(--molecular-shadow-hover);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .author__avatar img:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Social icon hover */
+.author__urls.social-icons a {
+  i {
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  &:hover i {
+    color: var(--molecular-cyan);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .author__urls.social-icons a:hover i {
+    transform: scale(1.15);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Homepage hero
+   -------------------------------------------------------------------------- */
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: $masthead-height;
+  padding: 3.5rem 1em 3rem;
+  color: var(--global-text-color);
+
+  @include breakpoint($medium) {
+    padding: 4.5rem 1em 4rem;
+  }
+}
+
+.home-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(6, 182, 212, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(139, 92, 246, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 60% 90%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+  background-color: var(--global-bg-color);
+
+  html[data-theme="dark"] & {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 30%, rgba(139, 92, 246, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 40% at 60% 90%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+    background-color: var(--global-bg-color);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: hero-glow 10s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes hero-glow {
+  0% { filter: hue-rotate(0deg); opacity: 1; }
+  100% { filter: hue-rotate(12deg); opacity: 0.92; }
+}
+
+.home-hero__nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.home-hero__node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--molecular-cyan);
+  opacity: 0.35;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.25), transparent);
+    transform-origin: left center;
+  }
+
+  &--1 { top: 18%; left: 12%; &::before { transform: rotate(25deg); } }
+  &--2 { top: 55%; left: 8%; background: var(--molecular-purple); &::before { transform: rotate(-15deg); width: 80px; } }
+  &--3 { top: 30%; right: 15%; background: var(--molecular-purple); &::before { transform: rotate(160deg); } }
+  &--4 { bottom: 25%; right: 10%; &::before { transform: rotate(200deg); width: 100px; } }
+  &--5 { top: 12%; right: 35%; width: 6px; height: 6px; opacity: 0.25; }
+  &--6 { bottom: 18%; left: 40%; width: 5px; height: 5px; background: var(--molecular-amber); opacity: 0.3; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: node-float 8s ease-in-out infinite;
+
+    &--1 { animation-delay: 0s; }
+    &--2 { animation-delay: -2s; }
+    &--3 { animation-delay: -4s; }
+    &--4 { animation-delay: -1s; }
+    &--5 { animation-delay: -3s; }
+    &--6 { animation-delay: -5s; }
+  }
+}
+
+@keyframes node-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: $x-large;
+  margin: 0 auto;
+  animation: intro 0.5s both;
+  animation-delay: 0.2s;
+}
+
+.home-hero__eyebrow {
+  margin: 0 0 0.5em;
+  font-size: $type-size-6;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+.home-hero__title {
+  margin: 0 0 0.35em;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-1;
+  line-height: 1.1;
+  background: var(--molecular-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-hero__tagline {
+  margin: 0 0 1.75em;
+  max-width: 38em;
+  font-size: $type-size-4;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 2.25em;
+}
+
+.btn--primary {
+  background: var(--molecular-gradient) !important;
+  border: 0 !important;
+  box-shadow: var(--molecular-shadow);
+
+  &:hover {
+    filter: brightness(1.08);
+    box-shadow: var(--molecular-shadow-hover);
+  }
+}
+
+.btn--outline {
+  color: var(--global-text-color) !important;
+  background: transparent !important;
+  border: 2px solid var(--molecular-cyan) !important;
+
+  &:hover {
+    color: #fff !important;
+    background: var(--molecular-gradient) !important;
+    border-color: transparent !important;
+  }
+}
+
+.home-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em 2.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--global-border-color);
+}
+
+.home-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+
+.home-hero__stat-value {
+  font-size: $type-size-3;
+  font-weight: 700;
+  font-family: $sans-serif-narrow;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+.home-hero__stat-label {
+  font-size: $type-size-7;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--global-text-color-light);
+}
+
+/* Reduce top margin when hero is present */
+.home-hero + #main {
+  margin-top: 1.5em;
+}
+
+/* --------------------------------------------------------------------------
+   Archive cards — hover lift + scroll reveal
+   -------------------------------------------------------------------------- */
+
+.list__item .archive__item {
+  padding: 1em 1.1em;
+  margin-bottom: 0.5em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+    box-shadow: var(--molecular-shadow);
+
+    html[data-theme="dark"] & {
+      border-color: rgba(6, 182, 212, 0.35);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .list__item .archive__item:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.archive__item-title a {
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--molecular-cyan-dark);
+
+    html[data-theme="dark"] & {
+      color: var(--molecular-cyan);
+    }
+  }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .masthead,
+  .home-hero__gradient,
+  .home-hero__node {
+    animation: none;
+  }
+}

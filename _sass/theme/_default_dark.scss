@@ -8,13 +8,13 @@ $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+$background                 : #0f172a;
+$background-light           : #1e293b;
+$background-lighter         : #334155;
+$text                       : #f1f5f9;
+$link                       : #22d3ee;
+$link-dark                  : #06b6d4;
+$link-light                 : #67e8f9;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;

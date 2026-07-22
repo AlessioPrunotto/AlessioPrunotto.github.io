@@ -8,6 +8,10 @@ layout: default
   {% include page__hero.html %}
 {% endif %}
 
+{% if page.url == "/" and page.hero %}
+  {% include home-hero.html %}
+{% endif %}
+
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
@@ -25,6 +29,7 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
+        {% unless page.url == "/" and page.hero %}
         <header>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}
@@ -42,6 +47,7 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
         </header>
+        {% endunless %}
       {% endunless %}
 
       <section class="page__content" itemprop="text">
