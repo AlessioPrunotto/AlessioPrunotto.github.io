@@ -23,6 +23,7 @@ html[data-theme="dark"] {
    -------------------------------------------------------------------------- */
 
 .masthead {
+  background-color: var(--global-bg-color);
   background: linear-gradient(
     120deg,
     rgba(15, 23, 42, 0.02) 0%,
@@ -54,7 +55,7 @@ html[data-theme="dark"] {
 
 .masthead__menu-item,
 .greedy-nav {
-  background-color: transparent;
+  background-color: var(--global-bg-color);
 }
 
 @keyframes molecular-gradient-shift {
