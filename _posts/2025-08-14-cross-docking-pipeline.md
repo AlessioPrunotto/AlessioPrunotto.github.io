@@ -1,11 +1,10 @@
 ---
-title: 'Blog Post number 1'
-date: 2012-08-14
-permalink: /posts/2012/08/blog-post-1/
+title: 'A Pipeline for Structure-Aware Docking'
+date: 2025-08-14
+permalink: /posts/2025/08/cross-docking-pipeline/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - cross-docking
+  - structural diversity
 ---
 
 # One UniProt Code, Many Conformations, Zero Excuses: A Pipeline for Structure-Aware Docking
@@ -42,13 +41,3 @@ The final analysis step isn't just "here are five affinity values, go nuts." It 
 If you're doing early-stage virtual screening triage, building intuition about a new target, or just tired of hand-wringing over which PDB entry to trust, this pipeline automates the boring-but-essential part: gathering structural diversity and quantifying how much your docking conclusions actually depend on it. It won't replace careful downstream validation (nothing should), but it will stop you from accidentally overfitting your medicinal chemistry instincts to the geometric quirks of one crystallographer's Tuesday.
 
 Code, install instructions, and examples are on GitHub — link below. Clone it, point it at your favorite UniProt code, and go find out whether your favorite hit is actually robust, or just lucky.
-
-
-Headings are cool
-======
-
-You can have many headings
-======
-
-Aren't headings cool?
-------
