@@ -19,32 +19,11 @@ html[data-theme="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   Masthead — animated gradient bar
+   Masthead — theme-aligned background
    -------------------------------------------------------------------------- */
 
 .masthead {
-  background-color: var(--global-bg-color);
-  background: linear-gradient(
-    120deg,
-    rgba(15, 23, 42, 0.02) 0%,
-    rgba(6, 182, 212, 0.07) 45%,
-    rgba(139, 92, 246, 0.06) 100%
-  );
-  background-size: 200% 200%;
-
-  html[data-theme="dark"] & {
-    background: linear-gradient(
-      120deg,
-      rgba(15, 23, 42, 0.98) 0%,
-      rgba(6, 182, 212, 0.1) 45%,
-      rgba(139, 92, 246, 0.08) 100%
-    );
-    background-size: 200% 200%;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: molecular-gradient-shift 14s ease infinite;
-  }
+  background: var(--global-bg-color);
 
   &::after {
     height: 2px;
@@ -56,11 +35,6 @@ html[data-theme="dark"] {
 .masthead__menu-item,
 .greedy-nav {
   background-color: var(--global-bg-color);
-}
-
-@keyframes molecular-gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 /* Nav underline slide */
