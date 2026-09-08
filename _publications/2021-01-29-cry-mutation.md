@@ -6,6 +6,7 @@ permalink: /publication/2021-01-29-cry-mutation
 excerpt: 'This study investigates genetic variation in circadian gene expression'
 date: 2021-01-29
 venue: 'Science Advances'
+link: 'https://www.science.org/doi/10.1126/sciadv.abc3781'
 paperurl: 'https://www.science.org/doi/10.1126/sciadv.abc3781'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Litovchenko, M., Meireles-Filho, A. C., Frochaux, M. V., Bevers, R. P., <ins>Prunotto, A.</ins>, Anduaga, A. M., ... & Deplancke, B. (2021). Extensive tissue-specific expression variation and novel regulators underlying circadian behavior. <i>Science advances</i>, 7(5), eabc3781.'

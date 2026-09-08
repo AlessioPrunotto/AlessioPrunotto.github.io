@@ -6,6 +6,7 @@ permalink: /publication/2013-10-12-ns5b-binding-free-energy
 excerpt: 'This study investigates potential inhibitors of Hep C NS5B via binding free energy calculations'
 date: 2013-10-12
 venue: 'Journal of Chemical Information and Modeling'
+link: 'https://pubs.acs.org/doi/10.1021/ci4003969'
 paperurl: 'https://pubs.acs.org/doi/10.1021/ci4003969'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Barakat, K. H., Law, J., <ins>Prunotto, A.</ins>, Magee, W. C., Evans, D. H., Tyrrell, D. L., ... & Houghton, M. (2013). Detailed computational study of the active site of the hepatitis C viral RNA polymerase to aid novel drug design. <i>Journal of chemical information and modeling</i>, 53(11), 3031-3043.'

@@ -6,6 +6,7 @@ permalink: /publication/2021-09-17-mbls-membrane-vesicles
 excerpt: 'This paper investigates the packaging of metallo-β-lactamases into membrane vesicles'
 date: 2021-09-17
 venue: 'Antimicrobial agents and chemotherapy'
+link: 'https://journals.asm.org/doi/10.1128/aac.00507-21'
 paperurl: 'https://journals.asm.org/doi/10.1128/aac.00507-21'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'López, C., <ins>Prunotto, A.</ins>, Bahr, G., Bonomo, R. A., González, L. J., Dal Peraro, M., & Vila, A. J. (2021). Specific protein-membrane interactions promote packaging of metallo-β-lactamases into outer membrane vesicles. <i>Antimicrobial agents and chemotherapy</i>, 65(10), 10-1128.'

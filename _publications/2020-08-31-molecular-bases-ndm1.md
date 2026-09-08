@@ -6,6 +6,7 @@ permalink: /publication/2020-08-31-molecular-bases-ndm1
 excerpt: 'This paper studies the molecular mechanism behind the antibiotic resistance of NDM-1'
 date: 2020-08-31
 venue: 'ACS Infectious Diseases'
+link: 'https://pubs.acs.org/doi/10.1021/acsinfecdis.0c00341'
 paperurl: 'https://pubs.acs.org/doi/10.1021/acsinfecdis.0c00341'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: '<ins>Prunotto, A.</ins>, Bahr, G., González, L. J., Vila, A. J., & Dal Peraro, M. (2020). Molecular bases of the membrane association mechanism potentiating antibiotic resistance by New Delhi metallo-β-lactamase 1. <i>ACS infectious diseases</i>, 6(10), 2719-2731.'

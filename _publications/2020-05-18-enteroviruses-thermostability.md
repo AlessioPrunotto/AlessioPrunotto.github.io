@@ -6,6 +6,7 @@ permalink: /publication/2020-05-18-enteroviruses-thermostability
 excerpt: 'This study evaluates the thermostability of enteroviruses'
 date: 2020-05-18
 venue: 'Journal of Virology'
+link: 'https://journals.asm.org/doi/10.1128/jvi.02176-19'
 paperurl: 'https://journals.asm.org/doi/10.1128/jvi.02176-19'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Meister, S., <ins>Prunotto, A.</ins>, Dal Peraro, M., & Kohn, T. (2020). Salt enhances the thermostability of enteroviruses by stabilizing capsid protein interfaces. <i>Journal of virology</i>, 94(11), 10-1128.'

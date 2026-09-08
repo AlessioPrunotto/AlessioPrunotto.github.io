@@ -6,6 +6,7 @@ permalink: /publication/2015-05-08-tlr7-docking
 excerpt: 'This study docks and evaluates potential tlr7 inhibitors'
 date: 2015-05-08
 venue: 'Molecules'
+link: 'https://www.mdpi.com/1420-3049/20/5/8316'
 paperurl: 'https://www.mdpi.com/1420-3049/20/5/8316'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Gentile, F., Deriu, M. A., Licandro, G., <ins>Prunotto, A.</ins>, Danani, A., & Tuszynski, J. A. (2015). Structure based modeling of small molecules binding to the TLR7 by atomistic level simulations. <i>Molecules</i>, 20(5), 8316-8340.'

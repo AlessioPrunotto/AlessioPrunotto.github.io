@@ -6,6 +6,7 @@ permalink: /publication/2017-09-22-microtubule-stability
 excerpt: 'This study investigates the stability of microtubules from an energetic perspective'
 date: 2017-09-22
 venue: 'International Journal of Molecular Sciences'
+link: 'https://www.mdpi.com/1422-0067/18/10/2042'
 paperurl: 'https://www.mdpi.com/1422-0067/18/10/2042'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Ayoub, A. T., Staelens, M., <ins>Prunotto, A.</ins>, Deriu, M. A., Danani, A., Klobukowski, M., & Tuszynski, J. A. (2017). Explaining the microtubule energy balance: contributions due to dipole moments, charges, van der Waals and solvation energy. <i>International journal of molecular sciences</i>, 18(10), 2042.'

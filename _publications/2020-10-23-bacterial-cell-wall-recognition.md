@@ -6,6 +6,7 @@ permalink: /publication/2020-10-23-bacterial-cell-wall-recognition
 excerpt: 'Recognition of bacterial cell walls by bacteriophages'
 date: 2020-10-23
 venue: 'Chemical Science'
+link: 'https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc04394j'
 paperurl: 'https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc04394j'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Shen, Y., Kalograiaki, I., <ins>Prunotto, A.</ins>, Dunne, M., Boulos, S., Taylor, N. M., ... & Loessner, M. J. (2021). Structural basis for recognition of bacterial cell wall teichoic acid by pseudo-symmetric SH3b-like repeats of a viral peptidoglycan hydrolase. <i>Chemical Science</i>, 12(2), 576-589.'
