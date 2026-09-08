@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="mol" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.16" stroke="#64748b" stroke-width="2" fill="none">
+    <path d="M142 540l22 12.7v25.4l-22 12.7-22-12.7v-25.4Z"/>
+    <circle cx="240" cy="560" r="7"/>
+  </g>
+  <g>
+    <path d="M1130 315 1055 445.3 905 445.3 830 315 905 184.7 1055 184.7Z"
+          fill="none" stroke="url(#mol)" stroke-width="30" stroke-linejoin="round"/>
+    <g stroke="url(#mol)" stroke-width="12" stroke-linecap="round">
+      <line x1="980" y1="270" x2="952" y2="318"/>
+      <line x1="980" y1="270" x2="1008" y2="318"/>
+    </g>
+    <g fill="#f59e0b">
+      <circle cx="980" cy="270" r="24"/>
+      <circle cx="952" cy="318" r="24"/>
+      <circle cx="1008" cy="318" r="24"/>
+    </g>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="80" y="280" font-size="78" font-weight="bold" fill="#f8fafc">Alessio Prunotto</text>
+    <text x="80" y="360" font-size="36" fill="#cbd5e1">Computational chemistry &#183; Cheminformatics</text>
+    <text x="80" y="410" font-size="36" fill="#cbd5e1">Drug design &#38; discovery</text>
+    <text x="80" y="500" font-size="30" fill="#22d3ee">alessioprunotto.github.io</text>
+  </g>
+  <rect y="624" width="1200" height="6" fill="url(#mol)"/>
+</svg>
