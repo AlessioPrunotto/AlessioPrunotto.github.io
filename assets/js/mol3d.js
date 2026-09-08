@@ -138,6 +138,10 @@
   }
 
   function initViewer(mount) {
+    // Reveal BEFORE creating the viewer: the mount is display:none until
+    // .is-active, and the viewer measures its element at creation. A
+    // zero-size guard here would deadlock (the class is what gives it size).
+    mount.classList.add('is-active');
     viewer = window.$3Dmol.createViewer(mount, { backgroundAlpha: 0 });
     viewer.addModel(CAFFEINE_SDF, 'sdf');
     applyStyle();
@@ -145,14 +149,13 @@
     viewer.zoom(1.15);
     viewer.render();
 
-    // Handoff: hide the 2D canvas, reveal the 3D layer.
+    // Handoff: hide the 2D canvas now that 3D is up.
     window.__mol3dActive = true;
     if (window.__molCanvas && window.__molCanvas.destroy) {
       window.__molCanvas.destroy();
     }
     var canvas = document.getElementById('mol-canvas');
     if (canvas) canvas.style.display = 'none';
-    mount.classList.add('is-active');
 
     // Pause when offscreen; restyle on theme toggle.
     if ('IntersectionObserver' in window) {
@@ -179,12 +182,11 @@
     if (!mount || window.__mol3dActive) return;
     if (!hasWebGL()) return;
     loadScript().then(function () {
-      // Canvas may have hidden the mount's size; ensure layout first.
-      if (mount.clientWidth === 0 && mount.clientHeight === 0) return;
       try {
         initViewer(mount);
       } catch (e) {
-        viewer = null; // canvas keeps running
+        viewer = null;
+        mount.classList.remove('is-active'); // hide again; canvas keeps running
       }
     }).catch(function () {
       // Offline / SRI mismatch / timeout: canvas keeps running.
