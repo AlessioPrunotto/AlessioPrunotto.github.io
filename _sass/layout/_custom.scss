@@ -313,12 +313,21 @@ html[data-theme="dark"] {
     }
   }
 
-  // Right-weighted viewport so the model centers in the clear zone
-  // beside the text column on wide screens; full-bleed and dimmed
-  // on narrow screens where text spans the whole width.
+  // Right-docked viewport so the model stays clear of the text column:
+  // anchored to the hero's right edge with a capped width instead of
+  // sharing the full bleed. Dimmed full-bleed below desktop widths,
+  // where the text spans the whole hero.
   @media screen and (min-width: $sidebar-screen-min-width) {
-    left: 34%;
-    width: 66%;
+    left: auto;
+    right: 0;
+    width: 44%;
+    max-width: 760px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    &.is-active {
+      opacity: 0.55;
+    }
   }
 
   @media (max-width: 699px) {

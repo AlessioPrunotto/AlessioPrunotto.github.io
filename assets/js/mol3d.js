@@ -113,10 +113,10 @@
   function applyStyle() {
     if (!viewer) return;
     var colors = elementColors();
-    // Space-filling (CPK) style: full-size spheres carry the 3D depth;
-    // sticks are omitted entirely.
+    // Ball-and-stick: chunky bonds with clearly visible atom spheres.
     viewer.setStyle({}, {
-      sphere: { scale: 1.0, colorscheme: { prop: 'elem', map: colors } }
+      stick: { radius: 0.18, colorscheme: { prop: 'elem', map: colors } },
+      sphere: { scale: 0.35, colorscheme: { prop: 'elem', map: colors } }
     });
     viewer.render();
   }
@@ -152,7 +152,7 @@
     viewer.addModel(CAFFEINE_SDF, 'sdf');
     applyStyle();
     viewer.zoomTo();
-    viewer.zoom(1.15);
+    viewer.zoom(1.0);
     viewer.render();
 
     // Handoff: hide the 2D canvas now that 3D is up.
