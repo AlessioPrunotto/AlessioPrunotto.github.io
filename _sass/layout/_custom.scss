@@ -223,20 +223,19 @@ html[data-theme="dark"] {
 .home-hero__content {
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
   max-width: $x-large;
   margin: 0 auto;
   animation: intro 0.5s both;
   animation-delay: 0.2s;
 
+  // Align the text column with #main's article column at every viewport
+  // width. The sidebar is `position: fixed` at the left edge of the
+  // centered $x-large container, so a viewport-fixed margin-left drifts
+  // under it on wide screens. Padding inside the same centered box
+  // cannot drift.
   @media screen and (min-width: $sidebar-screen-min-width) {
-    margin-left: calc(#{$sidebar-link-max-width} + 3rem);
-    margin-right: auto;
-    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 3rem);
-  }
-
-  @media screen and (min-width: 1500px) {
-    margin-left: calc(#{$sidebar-link-max-width} + 4rem);
-    max-width: calc(#{$x-large} - #{$sidebar-link-max-width} - 4rem);
+    padding-left: calc(#{$sidebar-link-max-width} + 3rem);
   }
 }
 
