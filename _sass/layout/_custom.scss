@@ -135,6 +135,19 @@ html[data-theme="dark"] {
   @include breakpoint($medium) {
     padding: 4.5rem 1em 4rem;
   }
+
+  // P2: gradient hairline closing the hero — mirrors the masthead detail.
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--molecular-gradient);
+    opacity: 0.55;
+    z-index: 1;
+  }
 }
 
 .home-hero__bg {
@@ -289,8 +302,6 @@ html[data-theme="dark"] {
   box-sizing: border-box;
   max-width: $x-large;
   margin: 0 auto;
-  animation: intro 0.5s both;
-  animation-delay: 0.2s;
 
   // Align the text column with #main's article column at every viewport
   // width. The sidebar is `position: fixed` at the left edge of the
@@ -300,6 +311,23 @@ html[data-theme="dark"] {
   @media screen and (min-width: $sidebar-screen-min-width) {
     padding-left: calc(#{$sidebar-link-max-width} + 3rem);
   }
+}
+
+// P1: staggered entrance — eyebrow first, stats last. Container itself
+// stays static so the animation never replays on theme toggle.
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__eyebrow,
+  .home-hero__title,
+  .home-hero__tagline,
+  .home-hero__actions,
+  .home-hero__stats {
+    animation: intro 0.5s both;
+  }
+
+  .home-hero__eyebrow { animation-delay: 0.2s; }
+  .home-hero__tagline { animation-delay: 0.36s; }
+  .home-hero__actions { animation-delay: 0.44s; }
+  .home-hero__stats { animation-delay: 0.52s; }
 }
 
 .home-hero__eyebrow {
@@ -321,9 +349,24 @@ html[data-theme="dark"] {
   font-size: $type-size-1;
   line-height: 1.1;
   background: var(--molecular-gradient);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  // P1: living gradient (entrance fade + slow sheen drift). The sheen
+  // starts after the entrance so the two never fight.
+  @media (prefers-reduced-motion: no-preference) {
+    animation:
+      intro 0.5s both,
+      title-sheen 9s ease-in-out 1s infinite alternate;
+    animation-delay: 0.28s, 1s;
+  }
+}
+
+@keyframes title-sheen {
+  from { background-position: 0% center; }
+  to { background-position: 100% center; }
 }
 
 .home-hero__tagline {
