@@ -122,6 +122,27 @@ html[data-theme="dark"] {
 }
 
 /* --------------------------------------------------------------------------
+   Footer — gradient hairline + faint molecule lattice
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+  border-top: 0;
+  background-image: url("/images/molecule-grid.svg");
+  background-size: 160px 160px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--molecular-gradient);
+    opacity: 0.55;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Homepage hero
    -------------------------------------------------------------------------- */
 
