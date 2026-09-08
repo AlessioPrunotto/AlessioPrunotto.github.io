@@ -1,8 +1,11 @@
 # AlessioPrunotto.github.io
 
+[![CI](https://github.com/AlessioPrunotto/AlessioPrunotto.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/AlessioPrunotto/AlessioPrunotto.github.io/actions/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/AlessioPrunotto/AlessioPrunotto.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/AlessioPrunotto/AlessioPrunotto.github.io/actions/workflows/pages.yml)
+
 Personal academic website for Alessio Prunotto, focused on computational chemistry, drug design, publications, CV, talks, and selected projects.
 
-The site is built with Jekyll and hosted via GitHub Pages.
+The site is built with Jekyll 4 (Ruby 3.3, Node 20) and deployed via GitHub Actions.
 
 ## Live Site
 
@@ -23,32 +26,48 @@ The site is built with Jekyll and hosted via GitHub Pages.
 
 ## Local Development
 
-Prerequisites:
+Two supported paths (pick one): native Ruby or Docker. Both use the pinned
+toolchains: Ruby from `.ruby-version`, Node 20 from `package.json` engines.
 
-- Ruby and Bundler
-- Node.js and npm
+### Option A — native (macOS)
 
-Install dependencies:
+Apple's system Ruby is too old for Jekyll 4. Install Ruby 3.3 via Homebrew:
 
+- brew install ruby@3.3
+- export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH" (add to shell profile)
 - bundle install
+- npm ci
 
-If your system Ruby blocks global gem writes, install gems locally in the repo:
+### Option B — Docker (any OS)
 
-- bundle config set --local path vendor/bundle
-- BUNDLE_FORCE_RUBY_PLATFORM=1 bundle install
+- docker compose up --build
 
-Build once:
+This builds the `Dockerfile` image (pinned Ruby 3.3 + Node 20, gems and npm
+packages baked in) and serves with live reload. No local Ruby/Node needed.
+Alternatively open the repo in VS Code via "Dev Containers: Reopen in Container".
 
-- bundle exec jekyll build
+### Build, serve, check (native commands; same steps run in CI)
+
+Build JS bundle (regenerates `assets/js/main.min.js`):
+
+- npm run build:js
+
+Build once (strict front matter, production HTML compression):
+
+- JEKYLL_ENV=production bundle exec jekyll build --strict-front-matter
 
 Run local server:
 
 - bundle exec jekyll serve --livereload
 
+Audit links/images (must pass in CI):
+
+- bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+
 Local URLs:
 
 - Site: http://127.0.0.1:4000/
-- LiveReload: http://127.0.0.1:35729
+- LiveReload: http://127.0.0.1:35729 (native `--livereload` / Docker default)
 
 ## Content Maintenance Notes
 
@@ -60,7 +79,18 @@ Local URLs:
 
 ## Deployment
 
-This repository is intended for GitHub Pages deployment from the default branch, using the repository name format username.github.io.
+Pushes to `master` deploy automatically:
+
+- `.github/workflows/pages.yml` builds Jekyll 4 with the repo's own
+  `Gemfile.lock` (+ `npm ci` / `npm run build:js`) and publishes to the
+  `github-pages` environment. The repo Pages setting uses Source "GitHub
+  Actions" (not the legacy auto-builder, which cannot build Jekyll 4).
+- `.github/workflows/ci.yml` validates pull requests and pushes: strict
+  Jekyll build + `htmlproofer` link/image audit.
+- `.github/dependabot.yml` proposes weekly Bundler/npm/Docker/Actions
+  updates; CI must stay green before merging.
+
+Live URL: https://alessioprunotto.github.io
 
 ## Acknowledgements
 
@@ -70,7 +100,7 @@ This repository is intended for GitHub Pages deployment from the default branch,
     https://mmistakes.github.io/minimal-mistakes/
 - Minimal Mistakes is Copyright (c) 2016 Michael Rose.
 - This repository includes and customizes that upstream work under the MIT License. See LICENSE.
-- Built with Jekyll and plugins from the GitHub Pages ecosystem.
+- Built with Jekyll 4 and the plugins listed in `Gemfile`.
 
 ## License
 

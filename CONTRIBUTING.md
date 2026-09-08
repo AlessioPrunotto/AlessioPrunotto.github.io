@@ -1,8 +1,12 @@
-Contributions are welcome! 
+Contributions are welcome!
 
-Please add issues and make pull requests. There are no stupid questions. All ideas are welcome. This is a volunteer project. Be excellent to each other.
+Please add issues and make pull requests. There are no stupid questions. All ideas are welcome. Be excellent to each other.
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+Every pull request is validated by CI (`.github/workflows/ci.yml`): a strict
+Jekyll build plus an `htmlproofer` link/image audit. Please keep both green —
+see `README.md` for the local dev setup (native Ruby 3.3 or Docker).
 
-Fork from master and go from there. Remember that this repository is intended to remain a generic, ready-to-fork template that demonstrates the features of academicpages.
+Note: this is a personal website based on the Academic Pages template
+(https://github.com/academicpages/academicpages.github.io). Template-level
+bugs belong upstream; site content and customization issues belong here.
 
