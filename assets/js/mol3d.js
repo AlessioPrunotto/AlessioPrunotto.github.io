@@ -15,6 +15,12 @@
   var CDN_SRI = 'sha512-rk2gI8FYzSbiZnDZ9M70SEhemyYIDwQQhb1zH9eK8kglMsp7bKJdu5+akb+wlTQxC9DiMmoMTNUQ0Z0Q/trdyw==';
   var LOAD_TIMEOUT_MS = 8000;
 
+  function log(level, msg) {
+    if (window.console && window.console[level]) {
+      window.console[level]('[mol3d] ' + msg);
+    }
+  }
+
   // Caffeine heavy atoms (C8N4O2), PubChem CID 2519 3D conformer.
   var CAFFEINE_SDF = [
     'caffeine',
@@ -151,6 +157,7 @@
 
     // Handoff: hide the 2D canvas now that 3D is up.
     window.__mol3dActive = true;
+    log('info', '3D caffeine ready');
     if (window.__molCanvas && window.__molCanvas.destroy) {
       window.__molCanvas.destroy();
     }
@@ -180,23 +187,34 @@
   function tryUpgrade() {
     var mount = document.getElementById('mol-3d');
     if (!mount || window.__mol3dActive) return;
-    if (!hasWebGL()) return;
+    if (!hasWebGL()) {
+      log('warn', 'no WebGL: staying on 2D canvas');
+      return;
+    }
     loadScript().then(function () {
       try {
         initViewer(mount);
       } catch (e) {
         viewer = null;
         mount.classList.remove('is-active'); // hide again; canvas keeps running
+        log('warn', 'viewer init failed, staying on 2D canvas: ' + (e && e.message));
       }
-    }).catch(function () {
+    }).catch(function (err) {
       // Offline / SRI mismatch / timeout: canvas keeps running.
+      log('warn', '3D library not loaded, staying on 2D canvas: ' + (err && err.message));
     });
   }
 
   function autoInit() {
     var mount = document.getElementById('mol-3d');
     if (!mount) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      log('info', 'reduced motion: staying on 2D canvas');
+      return;
+    }
+    // Observe the always-laid-out background layer, NOT the mount: #mol-3d
+    // is display:none until activation, so observing it would never fire.
+    var sentinel = mount.parentElement || mount;
     if (!('IntersectionObserver' in window)) {
       tryUpgrade();
       return;
@@ -208,7 +226,7 @@
         obs.disconnect();
         tryUpgrade();
       }
-    }, { threshold: 0.05 }).observe(mount);
+    }, { threshold: 0.05 }).observe(sentinel);
   }
 
   window.Mol3D = { tryUpgrade: tryUpgrade, CAFFEINE_SDF: CAFFEINE_SDF };
