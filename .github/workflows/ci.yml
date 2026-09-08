@@ -1,0 +1,44 @@
+# PR / push validation: reproducible Ruby + Node install, JS bundle, strict
+# Jekyll build, and HTML link/image audit. Mirrors README local dev steps.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Build JS bundle
+        run: npm run build:js
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --strict-front-matter --trace
+
+      - name: Check HTML (links, images, scripts)
+        run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href

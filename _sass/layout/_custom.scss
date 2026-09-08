@@ -60,6 +60,21 @@ html[data-theme="dark"] {
   }
 }
 
+/* Theme toggle — <button> reset to look like the nav links */
+.theme-toggle-btn {
+  padding: 1rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--molecular-cyan);
+    outline-offset: -2px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Author avatar — gradient ring
    -------------------------------------------------------------------------- */

@@ -9,13 +9,13 @@ tags:
 
 # One UniProt Code, Many Conformations, Zero Excuses: A Pipeline for Structure-Aware Docking
 
-Let's be honest about a dirty secret in structure-based drug design: most of us pick *one* PDB structure, dock our ligands into it, and call it a day. Maybe we eyeball the resolution, maybe we check if there's a co-crystallized ligand in the pocket, and then we treat that single frozen snapshot as if it were the definitive, eternal truth about how a protein behaves.
+I believe it still happens too frequently in structure-based drug design, that comp chems will pick *one* PDB structure, dock their ligands into it, and call it a day. Maybe we select it based on the best resolution, maybe we check if there's a co-crystallized ligand in the pocket, or maybe we just pick the last one that was published. The moral of the story is the same: we will still treat that single frozen snapshot as if it were the definitive, eternal truth about how a protein behaves.
 
-It isn't. Proteins are not statues. They're more like caffeinated toddlers — constantly wiggling, breathing, opening and closing pockets, occasionally doing something wildly different depending on who's watching (or which crystallization buffer they were dunked in). A single PDB entry is one Polaroid from a very long home video, and if your docking result depends entirely on which Polaroid you grabbed, you don't have a result — you have a coin flip with a nice RMSD written on it.
+It isn't. Proteins are not statues. They're more like caffeinated toddlers: constantly wiggling, breathing, opening and closing pockets, occasionally doing something wildly different depending on who's watching (or which crystallization buffer they were dunked in). A single PDB entry is one Polaroid from a very long home video, and if your docking result depends entirely on which Polaroid you grabbed, you don't have a reliable result, but rather a coin flip with a nice RMSD written on it.
 
-So I built a pipeline that refuses to settle for one Polaroid. Give it a UniProt code, and it will:
+So I built a pipeline that shows the extent of this problem. You can test it yourself. Just give it a UniProt code, and it will:
 
-1. **Pull down the available structures from the PDB** for that target — not just the "featured" one, but the actual population of deposited conformations.
+1. **Pull down a bunch of available structures from the PDB** for that target.
 2. **Select a diverse subset** using RMSD-based clustering, so instead of docking into five near-identical copies of the same apo structure, you dock into representatives that actually span the conformational space on offer.
 3. **Dock a small panel of ligands** into each selected structure using AutoDock Vina.
 4. **Compare the results across targets** so you can see, at a glance, where your ligands are robust hitters and where their binding poses and scores are basically vibes-based — wildly conformation-dependent and not to be trusted.

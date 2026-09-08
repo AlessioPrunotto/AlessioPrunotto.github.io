@@ -1,15 +1,30 @@
 {
-    "name": "ACADEMIC PAGES",
-    "dockerComposeFile": "../docker-compose.yaml",
-    "service": "jekyll-site",
-    "remoteEnv": {
-        "VSCODE_SERVER_DIR": "/home/vscode/.vscode-server"
+  "name": "Jekyll 4 (academic pages)",
+  "dockerComposeFile": ["../docker-compose.yaml"],
+  "service": "jekyll-site",
+  "workspaceFolder": "/usr/src/app",
+  "remoteUser": "vscode",
+  "remoteEnv": {
+    "VSCODE_SERVER_DIR": "/home/vscode/.vscode-server"
+  },
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll site",
+      "onAutoForward": "openPreview"
     },
-    "runArgs": [
-        "--user",
-        "1000:1000"
-    ],
-    "workspaceFolder": "/usr/src/app",
-    "remoteUser": "vscode",
-    "forwardPorts": [4000] // Add port forwarding
+    "35729": {
+      "label": "LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "bundle install --jobs 4 && npm ci",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
 }

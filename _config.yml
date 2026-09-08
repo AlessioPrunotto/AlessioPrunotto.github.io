@@ -96,7 +96,6 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -291,33 +290,23 @@ defaults:
       share: true
 
 
-# Sass/SCSS
+# Sass/SCSS (dart-sass via jekyll-sass-converter 3.x; vendored
+# breakpoint/susy use legacy @import — silence their deprecations)
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  quiet_deps: true
+  silence_deprecations: ["import", "global-builtin", "if-function", "color-functions", "slash-div"]
 
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
 timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins
+# Plugins (must match the :jekyll_plugins group in Gemfile)
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji

@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/academicpages/academicpages.github.io",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 20",
+    "npm": ">= 10"
   },
   "dependencies": {
     "fitvids": "^2.1.1",

@@ -1,9 +1,21 @@
 services:
   jekyll-site:
-    image: jekyll-site
     build: .
-    volumes: [ .:/usr/src/app ]
-    ports: [ 4000:4000 ]
+    image: jekyll-site
+    volumes:
+      - .:/usr/src/app
+      # Keep container gems/js out of the bind mount.
+      - bundle-cache:/usr/src/app/vendor/bundle
+      - node-modules:/usr/src/app/node_modules
+    ports:
+      - "4000:4000"
+      - "35729:35729"
     user: 1000:1000
-    environment: [ JEKYLL_ENV=docker ]
-    command: jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml
+    environment:
+      - JEKYLL_ENV=docker
+      - BUNDLE_PATH=/usr/src/app/vendor/bundle
+    command: bundle exec jekyll serve -H 0.0.0.0 --livereload --config _config.yml,_config_docker.yml
+
+volumes:
+  bundle-cache:
+  node-modules:
