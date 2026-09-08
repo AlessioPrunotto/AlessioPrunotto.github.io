@@ -189,7 +189,9 @@
     }
   }
 
-  button {
+  // Scoped to the direct-child hamburger only: the theme toggle is also
+  // a <button> inside .greedy-nav and must keep its own styling.
+  > button {
     position: absolute;
     height: 2.5rem;
     right: 0;
