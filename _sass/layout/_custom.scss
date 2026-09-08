@@ -254,6 +254,32 @@ html[data-theme="dark"] {
 
   &.is-active {
     display: block;
+    animation: mol-fade-in 0.9s ease both;
+  }
+
+  // Right-weighted viewport so the model centers in the clear zone
+  // beside the text column on wide screens; full-bleed and dimmed
+  // on narrow screens where text spans the whole width.
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    left: 34%;
+    width: 66%;
+  }
+
+  @media (max-width: 699px) {
+    &.is-active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes mol-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mol-3d.is-active {
+    animation: none;
   }
 }
 
