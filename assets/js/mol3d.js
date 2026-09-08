@@ -107,9 +107,10 @@
   function applyStyle() {
     if (!viewer) return;
     var colors = elementColors();
+    // Space-filling (CPK) style: full-size spheres carry the 3D depth;
+    // sticks are omitted entirely.
     viewer.setStyle({}, {
-      stick: { radius: 0.14, colorscheme: { prop: 'elem', map: colors } },
-      sphere: { scale: 0.3, colorscheme: { prop: 'elem', map: colors } }
+      sphere: { scale: 1.0, colorscheme: { prop: 'elem', map: colors } }
     });
     viewer.render();
   }
@@ -141,7 +142,7 @@
     viewer.addModel(CAFFEINE_SDF, 'sdf');
     applyStyle();
     viewer.zoomTo();
-    viewer.zoom(0.9);
+    viewer.zoom(1.15);
     viewer.render();
 
     // Handoff: hide the 2D canvas, reveal the 3D layer.
