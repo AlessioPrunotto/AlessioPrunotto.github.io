@@ -2,22 +2,25 @@
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
+hide_title: true
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
+<header class="cv-lead">
+  <h1 class="cv-lead__name">Alessio Prunotto</h1>
+  <p class="cv-lead__role">Computational Chemist · Chemical Data Scientist</p>
+  <p class="cv-lead__tags">Computational chemistry · Chemoinformatics · Drug discovery · Machine learning</p>
+  <p class="cv-lead__contact">
+    {% if site.author.location %}{{ site.author.location }}{% endif %}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">Email</a>{% endif %}{% if site.author.linkedin %} · <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}{% if site.author.github %} · <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
+  </p>
+  <a class="btn btn--primary" href="{{ base_path }}/files/cv.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
+</header>
+
 <div class="cv-modern" markdown="1">
-
-<section class="cv-block cv-block--education" markdown="1">
-## Education
-
-- Ph.D in Computational Biology / Computational Chemistry, École Polytechnique Fédérale de Lausanne (EPFL)
-- M.Sc. in Biomedical Engineering, Polytechnic University of Turin
-- B.Sc. in Biomedical Engineering, Polytechnic University of Turin
-</section>
 
 <section class="cv-block cv-block--experience" markdown="1">
 ## Work Experience
@@ -85,6 +88,14 @@ Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/
 Final project of Master studies performed at the Laboratory of Prof. Michael Houghton (Nobel Prize laureate in Physiology or Medicine, 2020).
 - Implement a computational method to automatize the search for potential inhibitors of NS5B, a RNA-dependent RNA polymerase of the hepatitis C virus
 - Learn usage of molecular docking, homology modelling, molecular dynamics simulations and free energy calculations
+</section>
+
+<section class="cv-block cv-block--education" markdown="1">
+## Education
+
+- Ph.D in Computational Biology / Computational Chemistry, École Polytechnique Fédérale de Lausanne (EPFL)
+- M.Sc. in Biomedical Engineering, Polytechnic University of Turin
+- B.Sc. in Biomedical Engineering, Polytechnic University of Turin
 </section>
 
 <section class="cv-block cv-block--skills" markdown="1">

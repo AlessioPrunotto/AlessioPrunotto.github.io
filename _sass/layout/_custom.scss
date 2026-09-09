@@ -756,6 +756,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
+   CV lead header — professional identity block (no sidebar on /cv/)
+   -------------------------------------------------------------------------- */
+
+.cv-lead {
+  margin: 0 0 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.cv-lead__name {
+  margin: 0 0 0.3em;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.cv-lead__role {
+  margin: 0 0 0.7em;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+.cv-lead__tags {
+  margin: 0 0 0.7em;
+  font-size: 1.0625rem;
+  color: var(--global-text-color-light);
+}
+
+.cv-lead__contact {
+  margin: 0 0 1.5em;
+  font-size: 0.9375rem;
+  color: var(--global-text-color-light);
+
+  a {
+    font-weight: 500;
+  }
+}
+
+/* --------------------------------------------------------------------------
    CV page readability improvements
    -------------------------------------------------------------------------- */
 
