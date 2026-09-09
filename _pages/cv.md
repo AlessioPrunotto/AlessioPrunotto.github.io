@@ -58,54 +58,46 @@ redirect_from:
 <section class="cv-block cv-block--experience" markdown="1">
 ## Work Experience
 
-### Chemical Data Scientist - [Synple Chem](https://www.synplechem.com/) (Zurich, Switzerland)
-*Aug 2025 → present*
+### Chemical Data Scientist — [Synple Chem](https://www.synplechem.com/) <span class="cv-date">Aug 2025 – Present</span>
+Zurich, Switzerland
 
 - **Build and validate** predictive models for chemical reactivity and solubility, physics-based and ML-based
 - **Integrate** model outputs into automated synthesis workflows
 
-### Drug Hunter / Computational Chemist - [Aqemia](https://www.aqemia.com/) (Paris, France)
-*Feb 2022 → Jul 2025*
+### Drug Hunter / Computational Chemist — [Aqemia](https://www.aqemia.com/) <span class="cv-date">Feb 2022 – Jul 2025</span>
+Paris, France
 
 - **Contributed to** early-stage drug discovery programs using protein modeling, molecular docking and molecular dynamics
 - **Led initiatives** to automate and scale computational analyses, including MD trajectory analysis and ligand-pose assessment
 - **Developed** computational workflows for evaluating protein–ligand interactions and ligand binding poses
 
-### Postdoctoral Researcher - [Computer-aided Molecular Engineering group](https://www.unil.ch/dof/en/home/menuinst/research-labs/zoete.html) (Lausanne, Switzerland)
-*Nov 2020 → Jan 2022*
-
-Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
+### Postdoctoral Researcher <span class="cv-date">Nov 2020 – Jan 2022</span>
+[Computer-aided Molecular Engineering group](https://www.unil.ch/dof/en/home/menuinst/research-labs/zoete.html) · Lausanne, Switzerland · Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
 
 - **Developed** interaction-fingerprint methods to post-process docking outputs and assess ligand-pose quality
 - **Built** a Rosetta-based scoring method for pMHC specificity towards T-cell receptors
 
-### Graduate Researcher - [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/) at École Polytechnique Fédérale de Lausanne (EPFL, Lausanne, Switzerland)
-*Jul 2015 → Oct 2020*
-
-Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
+### Graduate Researcher <span class="cv-date">Jul 2015 – Oct 2020</span>
+[Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland · Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
 - **Characterized** membrane-binding mechanisms of two peripheral membrane proteins (NDM-1, Golph3), identifying candidate allosteric sites
 - **Proposed** experimentally testable hypotheses from simulation data across several collaborative projects
 
-### Research Assistant at the [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/) at École Polytechnique Fédérale de Lausanne (EPFL, Lausanne, Switzerland)
-*Jan 2015 → Jun 2015*
+### Research Assistant <span class="cv-date">Jan 2015 – Jun 2015</span>
+[Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland
 
 Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
 - **Characterized** aggregating properties of 
 
-### Research Assistant at the [Computational Biophysics group](https://m3.dti.supsi.ch/) at University of Applied Sciences and Arts of Southern Switzerland (Lugano, Switzerland)
-*Jan 2013 → Dec 2014*
-
-Supervisor: [Prof. Andrea Danani](https://www.supsi.ch/en/andrea-danani)
+### Research Assistant <span class="cv-date">Jan 2013 – Dec 2014</span>
+[Computational Biophysics group](https://m3.dti.supsi.ch/), University of Applied Sciences and Arts of Southern Switzerland · Lugano, Switzerland · Supervisor: [Prof. Andrea Danani](https://www.supsi.ch/en/andrea-danani)
 
 - **Contributed to** multiple structure-based drug discovery projects, including TLR7 mechanism-of-action studies
 - **Supervised** a potency-optimization project for a GHS-R inverse agonist
 
-### Visiting student at the [Li Ka Shing Institute of Virology](https://www.ualberta.ca/en/li-ka-shing-institute-virology/index.html) at University of Alberta, Edmonton, Canada
-*Apr 2012 → Oct 2012*
-
-Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/mhoughto), [Prof. Jack Tuszynski](https://apps.ualberta.ca/directory/person/jackt)
+### Visiting Student <span class="cv-date">Apr 2012 – Oct 2012</span>
+[Li Ka Shing Institute of Virology](https://www.ualberta.ca/en/li-ka-shing-institute-virology/index.html), University of Alberta · Edmonton, Canada · Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/mhoughto), [Prof. Jack Tuszynski](https://apps.ualberta.ca/directory/person/jackt)
 
 - **Automated** the search for NS5B (hepatitis C polymerase) inhibitors via docking, homology modelling, MD and free-energy calculations (Master's final project)
 </section>

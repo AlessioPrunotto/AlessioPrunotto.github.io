@@ -963,18 +963,58 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-.cv-modern h3 {
-  margin-top: 1.2rem;
-  margin-bottom: 0.25rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--global-border-color);
+.cv-modern .cv-block--experience h3 {
+  margin: 1.7rem 0 0.3rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid var(--global-border-color);
+  overflow: hidden;
+  font-size: 1.125rem;
+  font-weight: 700;
   line-height: 1.35;
 }
 
-.cv-modern h2 + h3 {
-  margin-top: 0.4rem;
+.cv-modern .cv-block--experience h2 + h3 {
+  margin-top: 0.6rem;
   padding-top: 0;
   border-top: 0;
+}
+
+// Company link: subordinate to the role, accent-colored, never larger.
+.cv-modern .cv-block--experience h3 a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+// Date: right-aligned chronology column on desktop, stacked muted line
+// on narrow screens.
+.cv-modern .cv-date {
+  float: right;
+  margin-left: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 699px) {
+  .cv-modern .cv-date {
+    float: none;
+    display: block;
+    margin: 0.15rem 0 0;
+    font-size: 0.875rem;
+  }
+}
+
+// Location + supervisor line directly under the role.
+.cv-modern .cv-block--experience h3 + p {
+  margin: 0 0 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--global-text-color-light);
 }
 
 .cv-modern p em {
