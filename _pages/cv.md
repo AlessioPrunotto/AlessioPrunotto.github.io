@@ -86,13 +86,42 @@ Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/
 </section>
 
 <section class="cv-block cv-block--skills" markdown="1">
-## Skills
+## Expertise
 
-- Computational Chemistry
-- Cheminformatics
-- Drug Design & Drug Discovery
-- Data Science
-- Project Management
+**Computational chemistry**
+
+- Molecular docking
+- Molecular dynamics
+- Protein modeling
+- Structure-based drug design
+
+**Cheminformatics & data science**
+
+- Chemical data analysis
+- Molecular representations
+- Machine learning
+- Predictive modeling
+
+**Drug discovery**
+
+- Virtual screening
+- Protein–ligand interactions
+- Molecular design
+
+**Programming & tools**
+
+- Python
+- RDKit
+- PyTorch
+- scikit-learn
+- pandas
+- NumPy
+- AutoDock Vina
+- GROMACS
+- Rosetta
+- Git
+- Linux
+- SLURM
 </section>
 
 </div>

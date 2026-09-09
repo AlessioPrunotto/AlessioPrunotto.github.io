@@ -866,9 +866,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin: 0;
+  margin: 0 0 1.1rem;
   padding: 0;
   list-style: none;
+}
+
+.cv-modern .cv-block--skills ul:last-child {
+  margin-bottom: 0;
+}
+
+.cv-modern .cv-block--skills p {
+  margin: 1.1rem 0 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.cv-modern .cv-block--skills h2 + p {
+  margin-top: 0;
 }
 
 .cv-modern .cv-block--skills li {
