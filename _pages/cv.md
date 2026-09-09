@@ -39,7 +39,7 @@ redirect_from:
       <p class="highlight-card__text">Peer-reviewed research in computational chemistry and drug discovery.</p>
     </article>
     <article class="highlight-card">
-      <p class="highlight-card__stat"> </p>
+      <p class="highlight-card__stat">. </p>
       <h3 class="highlight-card__title">Industry + academic experience</h3>
       <p class="highlight-card__text">Experience spanning pharmaceutical R&D, computational chemistry and academic research.</p>
     </article>
