@@ -13,12 +13,22 @@ redirect_from:
 <header class="cv-lead">
   <h1 class="cv-lead__name">Alessio Prunotto</h1>
   <p class="cv-lead__role">Computational Chemist · Chemical Data Scientist</p>
-  <p class="cv-lead__tags">Computational chemistry · Chemoinformatics · Drug discovery · Machine learning</p>
   <p class="cv-lead__contact">
     {% if site.author.location %}{{ site.author.location }}{% endif %}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">Email</a>{% endif %}{% if site.author.linkedin %} · <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}{% if site.author.github %} · <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
   </p>
   <a class="btn btn--primary" href="{{ base_path }}/files/cv.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
 </header>
+
+<section class="cv-interests" aria-label="Research interests">
+  <h2 class="cv-interests__label">Research interests</h2>
+  <ul class="cv-interests__pills">
+    <li>Computational Chemistry</li>
+    <li>Chemoinformatics</li>
+    <li>Machine Learning</li>
+    <li>Drug Discovery</li>
+    <li>Molecular Design</li>
+  </ul>
+</section>
 
 <div class="cv-modern" markdown="1">
 

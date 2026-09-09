@@ -760,8 +760,8 @@ h1, h2, h3, h4, h5, h6 {
    -------------------------------------------------------------------------- */
 
 .cv-lead {
-  margin: 0 0 2rem;
-  padding-bottom: 1.75rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--global-border-color);
 }
 
@@ -799,6 +799,53 @@ h1, h2, h3, h4, h5, h6 {
 
   a {
     font-weight: 500;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CV interests strip — at-a-glance profile below the header
+   -------------------------------------------------------------------------- */
+
+.cv-interests {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.cv-interests__label {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+.cv-interests__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-interests__pills li {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(21, 155, 215, 0.35);
+  border-radius: 999px;
+  background: rgba(21, 155, 215, 0.1);
+  font-size: 0.9375rem;
+  font-weight: 600;
+
+  html[data-theme="dark"] & {
+    border-color: rgba(56, 189, 248, 0.45);
+    background: rgba(56, 189, 248, 0.16);
   }
 }
 
