@@ -139,4 +139,11 @@ $(document).ready(function () {
     preventDefault: false,
   });
 
+  // Subtle masthead depth once the page scrolls under the bar.
+  var toggleScrolled = function () {
+    $(".masthead").toggleClass("is-scrolled", $(window).scrollTop() > 8);
+  };
+  $(window).on("scroll", toggleScrolled);
+  toggleScrolled();
+
 });

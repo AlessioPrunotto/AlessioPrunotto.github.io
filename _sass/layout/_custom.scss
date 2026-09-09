@@ -105,7 +105,20 @@ h1, h2, h3, h4, h5, h6 {
    -------------------------------------------------------------------------- */
 
 .masthead {
-  background: var(--global-bg-color);
+  background: rgba(248, 250, 252, 0.82);
+  background: color-mix(in srgb, var(--global-bg-color) 82%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+
+  html[data-theme="dark"] & {
+    background: rgba(15, 23, 42, 0.78);
+    background: color-mix(in srgb, var(--global-bg-color) 78%, transparent);
+  }
+
+  // Subtle depth once the page moves under the bar (toggled from _main.js).
+  &.is-scrolled {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
 
   &::after {
     height: 1px;
@@ -115,7 +128,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .masthead__menu-item,
 .greedy-nav {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
+}
+
+// Nav CTA: compact button treatment inside the bar (no layout shift).
+.btn--nav {
+  margin: 0.35rem 0 0.35rem 1rem !important;
+  padding: 0.45rem 1.1rem !important;
+  font-size: 0.9375rem;
+  border-radius: 999px;
+}
+
+// Button treatment when collapsed into the hamburger dropdown.
+.hidden-links .btn--nav {
+  display: block;
+  margin: 0.25rem 1rem !important;
+  text-align: center;
 }
 
 /* Nav underline slide */
@@ -139,6 +167,11 @@ h1, h2, h3, h4, h5, h6 {
   &:hover::after {
     transform: scaleX(1);
   }
+}
+
+// The underline slide is for text links, not the nav CTA.
+.greedy-nav .visible-links li a.btn--nav::after {
+  display: none;
 }
 
 /* Theme toggle — <button> reset to look like the nav links */
