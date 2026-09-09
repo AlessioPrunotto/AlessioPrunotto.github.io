@@ -123,9 +123,11 @@
 
   function tick(now) {
     if (!spinning || !viewer) return;
-    // Throttle to ~30fps; one small step per frame = slow ambient spin.
+    // Throttle to ~30fps; one small step per frame = slow ambient spin,
+    // plus a long-period (~24s) tilt drift so the orientation breathes.
     if (now - lastTick > 33) {
       viewer.rotate(0.6, 'y');
+      viewer.rotate(0.18 * Math.sin((now / 1000) * Math.PI / 12), 'x');
       viewer.render();
       lastTick = now;
     }
@@ -152,7 +154,7 @@
     viewer.addModel(CAFFEINE_SDF, 'sdf');
     applyStyle();
     viewer.zoomTo();
-    viewer.zoom(1.0);
+    viewer.zoom(0.8);
     viewer.render();
 
     // Handoff: hide the 2D canvas now that 3D is up.

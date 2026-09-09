@@ -73,12 +73,12 @@
     var box = bbox(CAFFEINE.atoms);
     var bw = box.maxX - box.minX;
     var bh = box.maxY - box.minY;
-    var narrow = w < 700;
-    // Right third on wide screens so the text column stays clear;
-    // centered (and dimmer) on narrow screens where text spans full width.
-    var cx = narrow ? w * 0.5 : w * 0.8;
+    // The stage is the molecule's own territory: center in it. Slightly
+    // larger relative fill on small stages (mobile block).
+    var narrow = w < 500;
+    var cx = w * 0.5;
     var cy = h * 0.5 + bobY;
-    var scale = (Math.min(w, h) * (narrow ? 0.62 : 0.72)) / Math.max(bw, bh);
+    var scale = (Math.min(w, h) * (narrow ? 0.8 : 0.66)) / Math.max(bw, bh);
     var cos = Math.cos(angle);
     var sin = Math.sin(angle);
     var mx = (box.minX + box.maxX) / 2;
@@ -95,7 +95,7 @@
 
     var pts = CAFFEINE.atoms.map(project);
     ctx.save();
-    ctx.globalAlpha = narrow ? 0.5 : (opts.alpha || 0.9);
+    ctx.globalAlpha = opts.alpha || 0.95;
     ctx.lineCap = 'round';
 
     // Bonds first (under atoms).
@@ -177,8 +177,10 @@
       ctx.clearRect(0, 0, dims.w, dims.h);
       var t = (now - start) / 1000;
       var palette = isDarkTheme() ? PALETTES.dark : PALETTES.light;
-      // Slow ambient rotation + gentle vertical bob.
-      drawMolecule(ctx, dims.w, dims.h, t * 0.12, Math.sin(t * 0.4) * 6, palette, {});
+      // Slow ambient rotation plus a long-period orientation wobble
+      // (~24s): the pose visibly breathes without ever moving fast.
+      var angle = t * 0.09 + 0.3 * Math.sin(t * Math.PI / 12);
+      drawMolecule(ctx, dims.w, dims.h, angle, Math.sin(t * 0.4) * 6, palette, {});
       // ~30fps is plenty for ambient motion; saves battery.
       setTimeout(function () {
         if (running) rafId = requestAnimationFrame(frame);

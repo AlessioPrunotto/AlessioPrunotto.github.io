@@ -3,8 +3,6 @@
 <section class="home-hero" aria-label="Introduction">
   <div class="home-hero__bg" aria-hidden="true">
     <div class="home-hero__gradient"></div>
-    <canvas id="mol-canvas" class="mol-canvas"></canvas>
-    <div id="mol-3d" class="mol-3d"></div>
     <div class="home-hero__nodes">
       <span class="home-hero__node home-hero__node--1"></span>
       <span class="home-hero__node home-hero__node--2"></span>
@@ -16,6 +14,7 @@
   </div>
 
   <div class="home-hero__content wrapper">
+    <div class="home-hero__text">
     {% if site.author.avatar %}
       <img class="home-hero__avatar" src="{{ base_path }}/images/profile-photo-sm.png" alt="{{ site.author.name | default: site.title }}" fetchpriority="high">
     {% endif %}
@@ -29,6 +28,11 @@
       {% if site.author.github %}
         <a href="https://github.com/{{ site.author.github }}" class="btn btn--outline">GitHub</a>
       {% endif %}
+    </div>
+    </div>
+    <div class="home-hero__stage" aria-hidden="true">
+      <canvas id="mol-canvas" class="mol-canvas"></canvas>
+      <div id="mol-3d" class="mol-3d"></div>
     </div>
   </div>
 </section>

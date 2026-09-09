@@ -283,7 +283,7 @@ html[data-theme="dark"] {
 }
 
 /* Molecular layers: 2D canvas fallback + 3D viewer mount.
-   Both sit above the gradient, below the content and decorative nodes. */
+   Both fill the dedicated stage cell (never the text column). */
 .mol-canvas,
 .mol-3d {
   position: absolute;
@@ -297,17 +297,11 @@ html[data-theme="dark"] {
   transition: opacity 0.8s ease;
 
   &.is-ready {
-    opacity: 0.85;
-  }
-
-  html[data-theme="dark"] &.is-ready {
     opacity: 0.9;
   }
 
-  @media (max-width: 699px) {
-    &.is-ready {
-      opacity: 0.45;
-    }
+  html[data-theme="dark"] &.is-ready {
+    opacity: 0.95;
   }
 }
 
@@ -319,35 +313,12 @@ html[data-theme="dark"] {
     animation: mol-fade-in 0.9s ease both;
   }
 
-  // Depth lift for the space-filling model against the gradient.
+  // Depth lift for the model against the gradient.
   &.is-active canvas {
     filter: drop-shadow(0 18px 34px rgba(15, 23, 42, 0.35));
 
     html[data-theme="dark"] & {
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.6));
-    }
-  }
-
-  // Right-docked viewport so the model stays clear of the text column:
-  // anchored to the hero's right edge, occupying roughly the right
-  // third. Dimmed full-bleed below desktop widths, where the text
-  // spans the whole hero.
-  @media screen and (min-width: $sidebar-screen-min-width) {
-    left: auto;
-    right: 0;
-    width: 36%;
-    max-width: 640px;
-  }
-
-  @media screen and (max-width: 1023px) {
-    &.is-active {
-      opacity: 0.55;
-    }
-  }
-
-  @media (max-width: 699px) {
-    &.is-active {
-      opacity: 0.5;
     }
   }
 }
@@ -377,6 +348,21 @@ html[data-theme="dark"] {
   // cannot drift.
   @media screen and (min-width: $sidebar-screen-min-width) {
     padding-left: calc(#{$sidebar-link-max-width} + 3rem);
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+// Molecule stage: the model's own territory. Real layout space (not an
+// overlay), so text can never drift into it at any viewport width.
+.home-hero__stage {
+  position: relative;
+  min-height: 240px;
+
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    min-height: 380px;
   }
 }
 
