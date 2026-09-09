@@ -76,6 +76,21 @@ html[data-theme="dark"] {
 }
 
 /* --------------------------------------------------------------------------
+   Compact sidebar — subordinate profile (portrait lives in the hero)
+   -------------------------------------------------------------------------- */
+
+.sidebar .author__role {
+  margin: 0 0 10px;
+  font-size: $type-size-6;
+  font-weight: 600;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+/* --------------------------------------------------------------------------
    Author avatar — gradient ring
    -------------------------------------------------------------------------- */
 
@@ -368,6 +383,7 @@ html[data-theme="dark"] {
 // Staggered entrance — title first, actions last. Container itself
 // stays static so the animation never replays on theme toggle.
 @media (prefers-reduced-motion: no-preference) {
+  .home-hero__avatar,
   .home-hero__title,
   .home-hero__role,
   .home-hero__tagline,
@@ -375,9 +391,29 @@ html[data-theme="dark"] {
     animation: intro 0.5s both;
   }
 
+  .home-hero__avatar { animation-delay: 0.15s; }
   .home-hero__role { animation-delay: 0.28s; }
   .home-hero__tagline { animation-delay: 0.36s; }
   .home-hero__actions { animation-delay: 0.44s; }
+}
+
+.home-hero__avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 1.25rem;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(var(--global-bg-color), var(--global-bg-color)) padding-box,
+    var(--molecular-gradient) border-box;
+  box-shadow: var(--molecular-shadow);
+  object-fit: cover;
+
+  @media (max-width: 699px) {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 .home-hero__role {

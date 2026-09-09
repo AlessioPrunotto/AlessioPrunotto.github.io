@@ -16,6 +16,9 @@
   </div>
 
   <div class="home-hero__content wrapper">
+    {% if site.author.avatar %}
+      <img class="home-hero__avatar" src="{{ base_path }}/images/profile-photo-sm.png" alt="{{ site.author.name | default: site.title }}" fetchpriority="high">
+    {% endif %}
     <h1 class="home-hero__title">{{ site.author.name | default: site.title }}</h1>
     <p class="home-hero__role">Computational Chemist · Chemical Data Scientist</p>
     <p class="home-hero__tagline">I develop chemoinformatics and computational methods to accelerate drug discovery.</p>
