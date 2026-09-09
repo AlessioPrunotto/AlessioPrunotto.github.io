@@ -980,6 +980,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
+   Publications list — editorial hierarchy: dark titles, blue reserved
+   for interaction, quiet citations and permalink affordance
+   -------------------------------------------------------------------------- */
+
+.pubs-list .archive__item-title a:not([rel="permalink"]) {
+  color: var(--global-text-color);
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--molecular-cyan-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+
+    html[data-theme="dark"] & {
+      color: var(--molecular-cyan);
+    }
+  }
+}
+
+.pubs-list .archive__item-title a[rel="permalink"] {
+  opacity: 0.25;
+  transition: opacity 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+  }
+}
+
+.pubs-list .archive__item-title:hover a[rel="permalink"] {
+  opacity: 0.6;
+}
+
+.pubs-list .archive__item-excerpt,
+.pubs-list .archive__item-excerpt p {
+  color: var(--global-text-color-light);
+}
+
+/* --------------------------------------------------------------------------
    CV page readability improvements
    -------------------------------------------------------------------------- */
 
