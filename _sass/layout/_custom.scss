@@ -990,6 +990,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pubs-list .archive__item-title {
   font-size: 1.1875rem; // ~19px: titles fill the card, hierarchy leads
+  margin-top: 0;
 }
 
 .pubs-list .archive__item-title a:not([rel="permalink"]) {
