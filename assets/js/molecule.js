@@ -74,9 +74,9 @@
     var bw = box.maxX - box.minX;
     var bh = box.maxY - box.minY;
     var narrow = w < 700;
-    // Right-weighted on wide screens so the text column stays clear;
+    // Right third on wide screens so the text column stays clear;
     // centered (and dimmer) on narrow screens where text spans full width.
-    var cx = narrow ? w * 0.5 : w * 0.68;
+    var cx = narrow ? w * 0.5 : w * 0.8;
     var cy = h * 0.5 + bobY;
     var scale = (Math.min(w, h) * (narrow ? 0.62 : 0.72)) / Math.max(bw, bh);
     var cos = Math.cos(angle);

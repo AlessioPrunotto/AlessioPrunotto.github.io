@@ -16,40 +16,15 @@
   </div>
 
   <div class="home-hero__content wrapper">
-    {% if site.author.location %}
-      <p class="home-hero__eyebrow">{{ site.author.location }}</p>
-    {% endif %}
     <h1 class="home-hero__title">{{ site.author.name | default: site.title }}</h1>
-    {% if site.author.bio %}
-      <p class="home-hero__tagline">{{ site.author.bio }}</p>
-    {% endif %}
+    <p class="home-hero__role">Computational Chemist · Chemical Data Scientist</p>
+    <p class="home-hero__tagline">I develop chemoinformatics and computational methods to accelerate drug discovery.</p>
 
     <div class="home-hero__actions">
       <a href="{{ base_path }}/publications/" class="btn btn--primary">Publications</a>
       <a href="{{ base_path }}/cv/" class="btn btn--outline">CV</a>
       {% if site.author.github %}
         <a href="https://github.com/{{ site.author.github }}" class="btn btn--outline">GitHub</a>
-      {% endif %}
-    </div>
-
-    <div class="home-hero__stats">
-      {% if site.publications.size > 0 %}
-        <div class="home-hero__stat">
-          <span class="home-hero__stat-value">{{ site.publications.size }}</span>
-          <span class="home-hero__stat-label">Publications</span>
-        </div>
-      {% endif %}
-      {% if site.talks.size > 0 %}
-        <div class="home-hero__stat">
-          <span class="home-hero__stat-value">{{ site.talks.size }}</span>
-          <span class="home-hero__stat-label">Talks</span>
-        </div>
-      {% endif %}
-      {% if site.teaching.size > 0 %}
-        <div class="home-hero__stat">
-          <span class="home-hero__stat-value">{{ site.teaching.size }}</span>
-          <span class="home-hero__stat-label">Courses</span>
-        </div>
       {% endif %}
     </div>
   </div>

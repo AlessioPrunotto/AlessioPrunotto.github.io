@@ -314,14 +314,14 @@ html[data-theme="dark"] {
   }
 
   // Right-docked viewport so the model stays clear of the text column:
-  // anchored to the hero's right edge with a capped width instead of
-  // sharing the full bleed. Dimmed full-bleed below desktop widths,
-  // where the text spans the whole hero.
+  // anchored to the hero's right edge, occupying roughly the right
+  // third. Dimmed full-bleed below desktop widths, where the text
+  // spans the whole hero.
   @media screen and (min-width: $sidebar-screen-min-width) {
     left: auto;
     right: 0;
-    width: 44%;
-    max-width: 760px;
+    width: 36%;
+    max-width: 640px;
   }
 
   @media screen and (max-width: 1023px) {
@@ -365,26 +365,24 @@ html[data-theme="dark"] {
   }
 }
 
-// P1: staggered entrance — eyebrow first, stats last. Container itself
+// Staggered entrance — title first, actions last. Container itself
 // stays static so the animation never replays on theme toggle.
 @media (prefers-reduced-motion: no-preference) {
-  .home-hero__eyebrow,
   .home-hero__title,
+  .home-hero__role,
   .home-hero__tagline,
-  .home-hero__actions,
-  .home-hero__stats {
+  .home-hero__actions {
     animation: intro 0.5s both;
   }
 
-  .home-hero__eyebrow { animation-delay: 0.2s; }
+  .home-hero__role { animation-delay: 0.28s; }
   .home-hero__tagline { animation-delay: 0.36s; }
   .home-hero__actions { animation-delay: 0.44s; }
-  .home-hero__stats { animation-delay: 0.52s; }
 }
 
-.home-hero__eyebrow {
-  margin: 0 0 0.5em;
-  font-size: $type-size-6;
+.home-hero__role {
+  margin: 0 0 1em;
+  font-size: $type-size-5;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -457,38 +455,6 @@ html[data-theme="dark"] {
     background: var(--molecular-gradient) !important;
     border-color: transparent !important;
   }
-}
-
-.home-hero__stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em 2.5em;
-  padding-top: 1.5em;
-  border-top: 1px solid var(--global-border-color);
-}
-
-.home-hero__stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15em;
-}
-
-.home-hero__stat-value {
-  font-size: $type-size-3;
-  font-weight: 700;
-  font-family: $sans-serif-narrow;
-  color: var(--molecular-cyan-dark);
-
-  html[data-theme="dark"] & {
-    color: var(--molecular-cyan);
-  }
-}
-
-.home-hero__stat-label {
-  font-size: $type-size-7;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--global-text-color-light);
 }
 
 /* Reduce top margin when hero is present */
