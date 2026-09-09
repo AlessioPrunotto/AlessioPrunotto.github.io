@@ -47,12 +47,19 @@ Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
 - **Built** a Rosetta-based scoring method for pMHC specificity towards T-cell receptors
 
 ### Graduate Researcher - [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/) at École Polytechnique Fédérale de Lausanne (EPFL, Lausanne, Switzerland)
-*Jan 2015 → Oct 2015*
+*Jul 2015 → Oct 2020*
 
 Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
 - **Characterized** membrane-binding mechanisms of two peripheral membrane proteins (NDM-1, Golph3), identifying candidate allosteric sites
 - **Proposed** experimentally testable hypotheses from simulation data across several collaborative projects
+
+### Research Assistant at the [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/) at École Polytechnique Fédérale de Lausanne (EPFL, Lausanne, Switzerland)
+*Jan 2015 → Jun 2015*
+
+Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
+
+- **Characterized** aggregating properties of 
 
 ### Research Assistant at the [Computational Biophysics group](https://m3.dti.supsi.ch/) at University of Applied Sciences and Arts of Southern Switzerland (Lugano, Switzerland)
 *Jan 2013 → Dec 2014*
