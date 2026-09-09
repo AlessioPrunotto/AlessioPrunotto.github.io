@@ -6,18 +6,9 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
-    {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
-    {% endif %}
-  </div>
-
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    <p class="author__role">Computational Chemist</p>
   </div>
 
   <div class="author__urls-wrapper">
@@ -61,17 +52,8 @@
       {% if author.impactstory %}
         <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
       {% endif %}
-      {% if author.orcid %}
-        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
-      {% endif %}
-      {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
-      {% endif %}                        
       {% if author.researchgate %}
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
-      {% endif %}
-      {% if author.scopus %}
-        <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
       {% endif %}
       {% if author.inspire-hep %}
         <li><a href="{{ author.inspire-hep }}"><i class="ai ai-inspire ai-fw icon-pad-right"></i>INSPIRE-HEP</a></li>
@@ -125,9 +107,6 @@
       {% if author.lastfm %}
         <li><a href="https://last.fm/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm icon-pad-right" aria-hidden="true"></i>Last.fm</a></li>
       {% endif %}      
-      <!-- {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-      {% endif %}       -->
       {% if author.mastodon %}
         <li><a href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
       {% endif %}
