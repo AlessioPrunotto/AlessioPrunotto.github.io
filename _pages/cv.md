@@ -106,9 +106,27 @@ Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?la
 <section class="cv-block cv-block--education" markdown="1">
 ## Education
 
-- Ph.D in Computational Biology / Computational Chemistry, École Polytechnique Fédérale de Lausanne (EPFL)
-- M.Sc. in Biomedical Engineering, Polytechnic University of Turin
-- B.Sc. in Biomedical Engineering, Polytechnic University of Turin
+<div class="edu-row">
+  <p class="edu-degree">Ph.D.</p>
+  <div class="edu-detail">
+    <p class="edu-field">Computational Biology / Computational Chemistry</p>
+    <p class="edu-org"><a href="https://www.epfl.ch/">EPFL</a> · Lausanne, Switzerland</p>
+  </div>
+</div>
+<div class="edu-row">
+  <p class="edu-degree">M.Sc.</p>
+  <div class="edu-detail">
+    <p class="edu-field">Biomedical Engineering</p>
+    <p class="edu-org"><a href="https://www.polito.it/">Polytechnic University of Turin</a> · Turin, Italy</p>
+  </div>
+</div>
+<div class="edu-row">
+  <p class="edu-degree">B.Sc.</p>
+  <div class="edu-detail">
+    <p class="edu-field">Biomedical Engineering</p>
+    <p class="edu-org"><a href="https://www.polito.it/">Polytechnic University of Turin</a> · Turin, Italy</p>
+  </div>
+</div>
 </section>
 
 <section class="cv-block cv-block--skills" markdown="1">

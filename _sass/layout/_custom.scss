@@ -927,6 +927,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------------------------------------------------------------------
+   CV education — degree definition rows (two columns, stacking mobile)
+   -------------------------------------------------------------------------- */
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.edu-row:last-child {
+  margin-bottom: 0;
+}
+
+.edu-row p {
+  margin: 0;
+}
+
+.edu-degree {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.edu-field {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.edu-org {
+  font-size: 0.9375rem;
+  color: var(--global-text-color-light);
+}
+
+.edu-org a {
+  font-weight: 500;
+  color: var(--molecular-cyan-dark);
+
+  html[data-theme="dark"] & {
+    color: var(--molecular-cyan);
+  }
+}
+
+@media (max-width: 699px) {
+  .edu-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    CV page readability improvements
    -------------------------------------------------------------------------- */
 
