@@ -9,4 +9,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a Computational Chemist and Chemical Data Scientist active in the pharma domain. I develop cheminformatics tools to support drug discovery, and use them to find novel therapeutic agents.
+My work sits at the intersection of computational chemistry, machine learning, and drug discovery. I develop methods for molecular representation, chemical data analysis, and structure-based design, with a focus on translating computational approaches into practical tools for pharmaceutical research.
+
+## Research interests
+
+Chemoinformatics · Machine Learning · Molecular Design · Drug Discovery
