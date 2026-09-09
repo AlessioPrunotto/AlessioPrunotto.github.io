@@ -3,19 +3,19 @@
    ========================================================================== */
 
 :root {
-  --molecular-cyan: #06b6d4;
-  --molecular-cyan-dark: #0891b2;
-  --molecular-purple: #8b5cf6;
-  --molecular-amber: #f59e0b;
+  --molecular-cyan: #159BD7; /* accent: restrained cyan/blue */
+  --molecular-cyan-dark: #0E7FAE; /* accent text on light backgrounds */
   --molecular-navy: #0f172a;
-  --molecular-gradient: linear-gradient(135deg, var(--molecular-cyan) 0%, var(--molecular-purple) 100%);
-  --molecular-shadow: 0 8px 30px rgba(6, 182, 212, 0.12);
-  --molecular-shadow-hover: 0 14px 40px rgba(139, 92, 246, 0.18);
+  --molecular-gradient: linear-gradient(135deg, #159BD7 0%, #7FB8E8 100%); /* reserved: primary CTA only */
+  --molecular-shadow: 0 8px 30px rgba(21, 155, 215, 0.12);
+  --molecular-shadow-hover: 0 14px 40px rgba(21, 155, 215, 0.20);
 }
 
 html[data-theme="dark"] {
-  --molecular-shadow: 0 8px 30px rgba(6, 182, 212, 0.08);
-  --molecular-shadow-hover: 0 14px 40px rgba(139, 92, 246, 0.15);
+  --molecular-cyan: #38BDF8; /* luminous accent for navy backgrounds */
+  --molecular-cyan-dark: #7DD3FC;
+  --molecular-shadow: 0 8px 30px rgba(21, 155, 215, 0.10);
+  --molecular-shadow-hover: 0 14px 40px rgba(56, 189, 248, 0.18);
 }
 
 /* --------------------------------------------------------------------------
@@ -108,9 +108,8 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--global-bg-color);
 
   &::after {
-    height: 2px;
-    background: var(--molecular-gradient);
-    opacity: 0.55;
+    height: 1px;
+    background: var(--global-border-color);
   }
 }
 
@@ -130,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 1rem;
     bottom: 0.35rem;
     height: 2px;
-    background: var(--molecular-gradient);
+    background: var(--molecular-cyan);
     border-radius: 1px;
     transform: scaleX(0);
     transform-origin: left center;
@@ -177,16 +176,13 @@ h1, h2, h3, h4, h5, h6 {
    -------------------------------------------------------------------------- */
 
 .author__avatar img {
-  border: 3px solid transparent;
-  background:
-    linear-gradient(var(--global-bg-color), var(--global-bg-color)) padding-box,
-    var(--molecular-gradient) border-box;
+  border: 2px solid var(--global-border-color);
   box-shadow: var(--molecular-shadow);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   @include breakpoint($large) {
     padding: 4px;
-    border: 3px solid transparent;
+    border: 2px solid var(--global-border-color);
   }
 }
 
@@ -243,12 +239,11 @@ h1, h2, h3, h4, h5, h6 {
   &::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -1px;
     left: 0;
     right: 0;
-    height: 2px;
-    background: var(--molecular-gradient);
-    opacity: 0.55;
+    height: 1px;
+    background: var(--global-border-color);
   }
 }
 
@@ -267,16 +262,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 4.5rem 1em 4rem;
   }
 
-  // P2: gradient hairline closing the hero — mirrors the masthead detail.
+  // Thin neutral rule closing the hero.
   &::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 2px;
-    background: var(--molecular-gradient);
-    opacity: 0.55;
+    height: 1px;
+    background: var(--global-border-color);
     z-index: 1;
   }
 }
@@ -292,16 +286,14 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(6, 182, 212, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(139, 92, 246, 0.14) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 60% 90%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(21, 155, 215, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 30%, rgba(127, 184, 232, 0.06) 0%, transparent 55%);
   background-color: var(--global-bg-color);
 
   html[data-theme="dark"] & {
     background:
-      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 50% at 80% 30%, rgba(139, 92, 246, 0.18) 0%, transparent 55%),
-      radial-gradient(ellipse 60% 40% at 60% 90%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(21, 155, 215, 0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 30%, rgba(127, 184, 232, 0.08) 0%, transparent 55%);
     background-color: var(--global-bg-color);
   }
 
@@ -322,12 +314,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-hero__node {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--molecular-cyan);
-  opacity: 0.35;
-  box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
+  opacity: 0.28;
+  box-shadow: 0 0 10px rgba(21, 155, 215, 0.3);
 
   &::before {
     content: "";
@@ -336,16 +328,16 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     width: 120px;
     height: 1px;
-    background: linear-gradient(90deg, rgba(6, 182, 212, 0.25), transparent);
+    background: linear-gradient(90deg, rgba(21, 155, 215, 0.18), transparent);
     transform-origin: left center;
   }
 
   &--1 { top: 18%; left: 12%; &::before { transform: rotate(25deg); } }
-  &--2 { top: 55%; left: 8%; background: var(--molecular-purple); &::before { transform: rotate(-15deg); width: 80px; } }
-  &--3 { top: 30%; right: 15%; background: var(--molecular-purple); &::before { transform: rotate(160deg); } }
+  &--2 { top: 55%; left: 8%; opacity: 0.22; &::before { transform: rotate(-15deg); width: 80px; } }
+  &--3 { top: 30%; right: 15%; opacity: 0.22; &::before { transform: rotate(160deg); } }
   &--4 { bottom: 25%; right: 10%; &::before { transform: rotate(200deg); width: 100px; } }
-  &--5 { top: 12%; right: 35%; width: 6px; height: 6px; opacity: 0.25; }
-  &--6 { bottom: 18%; left: 40%; width: 5px; height: 5px; background: var(--molecular-amber); opacity: 0.3; }
+  &--5 { top: 12%; right: 35%; width: 6px; height: 6px; opacity: 0.2; }
+  &--6 { bottom: 18%; left: 40%; width: 5px; height: 5px; opacity: 0.22; }
 
   @media (prefers-reduced-motion: no-preference) {
     animation: node-float 8s ease-in-out infinite;
@@ -471,10 +463,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 120px;
   margin: 0 0 1.25rem;
   border-radius: 50%;
-  border: 3px solid transparent;
-  background:
-    linear-gradient(var(--global-bg-color), var(--global-bg-color)) padding-box,
-    var(--molecular-gradient) border-box;
+  border: 2px solid var(--global-border-color);
   box-shadow: var(--molecular-shadow);
   object-fit: cover;
 
@@ -504,25 +493,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  background: var(--molecular-gradient);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #172033;
 
-  // P1: living gradient (entrance fade + slow sheen drift). The sheen
-  // starts after the entrance so the two never fight.
-  @media (prefers-reduced-motion: no-preference) {
-    animation:
-      intro 0.5s both,
-      title-sheen 9s ease-in-out 1s infinite alternate;
-    animation-delay: 0.28s, 1s;
+  html[data-theme="dark"] & {
+    color: #F1F5F9;
   }
-}
 
-@keyframes title-sheen {
-  from { background-position: 0% center; }
-  to { background-position: 100% center; }
+  // Entrance fade only — hierarchy now comes from size, not color.
+  @media (prefers-reduced-motion: no-preference) {
+    animation: intro 0.5s both;
+    animation-delay: 0.28s;
+  }
 }
 
 .home-hero__tagline {
@@ -555,12 +536,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn--outline {
   color: var(--global-text-color) !important;
   background: transparent !important;
-  border: 2px solid var(--molecular-cyan) !important;
+  border: 1.5px solid var(--molecular-cyan) !important;
 
   &:hover {
     color: #fff !important;
-    background: var(--molecular-gradient) !important;
-    border-color: transparent !important;
+    background: var(--molecular-cyan-dark) !important;
+    border-color: var(--molecular-cyan-dark) !important;
   }
 }
 
@@ -581,11 +562,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
-    border-color: rgba(6, 182, 212, 0.25);
+    border-color: rgba(21, 155, 215, 0.3);
     box-shadow: var(--molecular-shadow);
 
     html[data-theme="dark"] & {
-      border-color: rgba(6, 182, 212, 0.35);
+      border-color: rgba(56, 189, 248, 0.4);
     }
   }
 }
@@ -652,15 +633,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cv-modern .cv-block--education {
-  border-left-color: #0ea5e9;
+  border-left-color: #159BD7;
 }
 
 .cv-modern .cv-block--experience {
-  border-left-color: #0ea5a4;
+  border-left-color: #0E7FAE;
 }
 
 .cv-modern .cv-block--skills {
-  border-left-color: #f59e0b;
+  border-left-color: #7FB8E8;
 }
 
 .cv-modern h2 {
@@ -705,9 +686,9 @@ h1, h2, h3, h4, h5, h6 {
 .cv-modern .cv-block--skills li {
   margin: 0;
   padding: 0.3rem 0.7rem;
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  border: 1px solid rgba(21, 155, 215, 0.35);
   border-radius: 999px;
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(21, 155, 215, 0.10);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -717,6 +698,6 @@ html[data-theme="dark"] .cv-modern .cv-block {
 }
 
 html[data-theme="dark"] .cv-modern .cv-block--skills li {
-  border-color: rgba(245, 158, 11, 0.45);
-  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(21, 155, 215, 0.45);
+  background: rgba(21, 155, 215, 0.16);
 }
