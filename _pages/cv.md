@@ -34,22 +34,22 @@ redirect_from:
   <h2 class="cv-highlights__label">Highlights</h2>
   <div class="cv-highlights__grid">
     <article class="highlight-card">
-      <!-- <p class="highlight-card__stat">{{ site.publications.size }}</p> -->
-      <h3 class="highlight-card__title">{{ site.publications.size }} publications</h3>
-      <p class="highlight-card__text">Peer-reviewed research in computational chemistry and drug discovery.</p>
-    </article>
-    <article class="highlight-card">
       <!-- <p class="highlight-card__stat">. </p> -->
       <h3 class="highlight-card__title">Industry + academic experience</h3>
       <p class="highlight-card__text">Experience spanning pharmaceutical R&D, computational chemistry and academic research.</p>
+    </article>
+    <article class="highlight-card">
+      <h3 class="highlight-card__title">Chemical AI / automation</h3>
+      <p class="highlight-card__text">Development of predictive and automated computational workflows.</p>
     </article>
     <article class="highlight-card">
       <h3 class="highlight-card__title">Drug discovery</h3>
       <p class="highlight-card__text">Experience across molecular modeling, docking, molecular dynamics and computational screening.</p>
     </article>
     <article class="highlight-card">
-      <h3 class="highlight-card__title">Chemical AI / automation</h3>
-      <p class="highlight-card__text">Development of predictive and automated computational workflows.</p>
+      <!-- <p class="highlight-card__stat">{{ site.publications.size }}</p> -->
+      <h3 class="highlight-card__title">{{ site.publications.size }} publications</h3>
+      <p class="highlight-card__text">Peer-reviewed research in computational chemistry and drug discovery.</p>
     </article>
   </div>
 </section>
