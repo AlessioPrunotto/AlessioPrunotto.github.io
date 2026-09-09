@@ -35,7 +35,7 @@ redirect_from:
   <div class="cv-highlights__grid">
     <article class="highlight-card">
       <!-- <p class="highlight-card__stat">{{ site.publications.size }}</p> -->
-      <h3 class="highlight-card__title">{{ site.publications.size }} Publications</h3>
+      <h3 class="highlight-card__title">{{ site.publications.size }} publications</h3>
       <p class="highlight-card__text">Peer-reviewed research in computational chemistry and drug discovery.</p>
     </article>
     <article class="highlight-card">
