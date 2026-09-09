@@ -43,12 +43,12 @@
 
   var PALETTES = {
     light: {
-      C: '#334155', N: '#2563eb', O: '#dc2626', H: '#94a3b8',
+      C: '#172033', N: '#159BD7', O: '#dc2626', H: '#94a3b8',
       bond: 'rgba(100, 116, 139, 0.85)',
       labelDark: '#ffffff', labelLight: '#0f172a'
     },
     dark: {
-      C: '#e2e8f0', N: '#60a5fa', O: '#f87171', H: '#64748b',
+      C: '#e2e8f0', N: '#38BDF8', O: '#f87171', H: '#64748b',
       bond: 'rgba(148, 163, 184, 0.8)',
       labelDark: '#0f172a', labelLight: '#0f172a'
     }

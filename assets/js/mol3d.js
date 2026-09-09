@@ -65,9 +65,9 @@
 
   function elementColors() {
     if (isDarkTheme()) {
-      return { C: '#e2e8f0', N: '#60a5fa', O: '#f87171' };
+      return { C: '#e2e8f0', N: '#38BDF8', O: '#f87171' };
     }
-    return { C: '#334155', N: '#2563eb', O: '#dc2626' };
+    return { C: '#172033', N: '#159BD7', O: '#dc2626' };
   }
 
   function hasWebGL() {
