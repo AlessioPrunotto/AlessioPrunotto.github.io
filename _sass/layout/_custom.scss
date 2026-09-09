@@ -984,6 +984,14 @@ h1, h2, h3, h4, h5, h6 {
    for interaction, quiet citations and permalink affordance
    -------------------------------------------------------------------------- */
 
+.pubs-list .list__item .archive__item {
+  padding: 0.75em 1.1em;
+}
+
+.pubs-list .archive__item-title {
+  font-size: 1.1875rem; // ~19px: titles fill the card, hierarchy leads
+}
+
 .pubs-list .archive__item-title a:not([rel="permalink"]) {
   color: var(--global-text-color);
   font-weight: 600;
@@ -1017,6 +1025,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pubs-list .archive__item-excerpt,
 .pubs-list .archive__item-excerpt p {
+  margin-bottom: 0.6em;
   color: var(--global-text-color-light);
 }
 
