@@ -19,6 +19,88 @@ html[data-theme="dark"] {
 }
 
 /* --------------------------------------------------------------------------
+   Contemporary type — Inter variable, self-hosted (see assets/fonts/)
+   Hierarchy is carried by size + spacing; weight stays quiet (400-650).
+   NOTE: $sans-serif was already consumed by earlier imports, so these
+   are plain-CSS overrides placed last in the cascade on purpose.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-latin-wght-italic.woff2") format("woff2");
+}
+
+$inter: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+body {
+  font-family: $inter;
+  font-size: 1.0625rem; // 17px body
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $inter;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.page__content p,
+.page__content li,
+.archive__item-excerpt {
+  line-height: 1.65;
+}
+
+// Page + section titles: size leads, weight whispers.
+.page__title {
+  font-size: 2.125rem; // ~34px
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.archive__item-title {
+  font-weight: 600;
+}
+
+// Navigation + buttons: medium, never bold.
+.masthead__menu-item a,
+.greedy-nav a,
+.sidebar .author__urls a,
+.btn {
+  font-family: $inter;
+  font-weight: 500;
+}
+
+.masthead__menu-item {
+  font-size: 0.9375rem; // 15px
+}
+
+// Small labels + meta: compact, semibold, spaced.
+.page__meta,
+.page__date,
+.archive__item .page__date,
+.page__footer-copyright,
+.page__footer-follow li {
+  font-size: 0.8125rem; // 13px
+}
+
+.page__footer-follow a {
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
    Masthead — theme-aligned background
    -------------------------------------------------------------------------- */
 
@@ -404,7 +486,7 @@ html[data-theme="dark"] {
 
 .home-hero__role {
   margin: 0 0 1em;
-  font-size: $type-size-5;
+  font-size: 0.8125rem; // 13px kicker label
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -417,9 +499,11 @@ html[data-theme="dark"] {
 
 .home-hero__title {
   margin: 0 0 0.35em;
-  font-family: $sans-serif-narrow;
-  font-size: $type-size-1;
-  line-height: 1.1;
+  font-family: $inter;
+  font-size: clamp(2.75rem, 6vw, 4rem); // 44px -> 64px display
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   background: var(--molecular-gradient);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -444,8 +528,9 @@ html[data-theme="dark"] {
 .home-hero__tagline {
   margin: 0 0 1.75em;
   max-width: 38em;
-  font-size: $type-size-4;
-  line-height: 1.5;
+  font-size: 1.3125rem; // 21px subtitle
+  font-weight: 450;
+  line-height: 1.55;
   color: var(--global-text-color-light);
 }
 
