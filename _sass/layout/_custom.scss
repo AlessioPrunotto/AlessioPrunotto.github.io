@@ -3,19 +3,19 @@
    ========================================================================== */
 
 :root {
-  --molecular-cyan: #159BD7; /* accent: restrained cyan/blue */
-  --molecular-cyan-dark: #0E7FAE; /* accent text on light backgrounds */
+  --molecular-cyan: #1090CB; /* accent: deepened pharma-blue (IC-technical) */
+  --molecular-cyan-dark: #0C6E9C; /* accent text on light backgrounds */
   --molecular-navy: #0f172a;
-  --molecular-gradient: linear-gradient(135deg, #159BD7 0%, #7FB8E8 100%); /* reserved: primary CTA only */
-  --molecular-shadow: 0 8px 30px rgba(21, 155, 215, 0.12);
-  --molecular-shadow-hover: 0 14px 40px rgba(21, 155, 215, 0.20);
+  --molecular-gradient: linear-gradient(135deg, #1090CB 0%, #7FB8E8 100%); /* reserved: primary CTA only */
+  --molecular-shadow: 0 6px 22px rgba(16, 144, 203, 0.12);
+  --molecular-shadow-hover: 0 10px 28px rgba(16, 144, 203, 0.16);
 }
 
 html[data-theme="dark"] {
   --molecular-cyan: #38BDF8; /* luminous accent for navy backgrounds */
   --molecular-cyan-dark: #7DD3FC;
-  --molecular-shadow: 0 8px 30px rgba(21, 155, 215, 0.10);
-  --molecular-shadow-hover: 0 14px 40px rgba(56, 189, 248, 0.18);
+  --molecular-shadow: 0 6px 22px rgba(16, 144, 203, 0.10);
+  --molecular-shadow-hover: 0 10px 28px rgba(56, 189, 248, 0.12);
 }
 
 /* --------------------------------------------------------------------------
@@ -327,25 +327,16 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(21, 155, 215, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(16, 144, 203, 0.07) 0%, transparent 60%),
     radial-gradient(ellipse 70% 50% at 80% 30%, rgba(127, 184, 232, 0.06) 0%, transparent 55%);
   background-color: var(--global-bg-color);
 
   html[data-theme="dark"] & {
     background:
-      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(21, 155, 215, 0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(16, 144, 203, 0.10) 0%, transparent 60%),
       radial-gradient(ellipse 70% 50% at 80% 30%, rgba(127, 184, 232, 0.08) 0%, transparent 55%);
     background-color: var(--global-bg-color);
   }
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: hero-glow 10s ease-in-out infinite alternate;
-  }
-}
-
-@keyframes hero-glow {
-  0% { filter: hue-rotate(0deg); opacity: 1; }
-  100% { filter: hue-rotate(12deg); opacity: 0.92; }
 }
 
 .home-hero__nodes {
@@ -360,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background: var(--molecular-cyan);
   opacity: 0.28;
-  box-shadow: 0 0 10px rgba(21, 155, 215, 0.3);
+  box-shadow: 0 0 10px rgba(16, 144, 203, 0.3);
 
   &::before {
     content: "";
@@ -369,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     width: 120px;
     height: 1px;
-    background: linear-gradient(90deg, rgba(21, 155, 215, 0.18), transparent);
+    background: linear-gradient(90deg, rgba(16, 144, 203, 0.18), transparent);
     transform-origin: left center;
   }
 
@@ -381,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   &--6 { bottom: 18%; left: 40%; width: 5px; height: 5px; opacity: 0.22; }
 
   @media (prefers-reduced-motion: no-preference) {
-    animation: node-float 8s ease-in-out infinite;
+    animation: node-float 12s ease-in-out infinite;
 
     &--1 { animation-delay: 0s; }
     &--2 { animation-delay: -2s; }
@@ -412,11 +403,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 0.8s ease;
 
   &.is-ready {
-    opacity: 0.9;
+    opacity: 0.7;
   }
 
   html[data-theme="dark"] &.is-ready {
-    opacity: 0.95;
+    opacity: 0.85;
   }
 }
 
@@ -642,7 +633,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
-    border-color: rgba(21, 155, 215, 0.3);
+    border-color: rgba(16, 144, 203, 0.3);
     box-shadow: var(--molecular-shadow);
 
     html[data-theme="dark"] & {
@@ -665,7 +656,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 48px;
   margin-bottom: 1rem;
   border-radius: 50%;
-  background: rgba(21, 155, 215, 0.12);
+  background: rgba(16, 144, 203, 0.12);
   color: var(--molecular-cyan-dark);
   font-size: 20px;
 
@@ -722,7 +713,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
-    border-color: rgba(21, 155, 215, 0.3);
+    border-color: rgba(16, 144, 203, 0.3);
     box-shadow: var(--molecular-shadow);
 
     html[data-theme="dark"] & {
@@ -856,9 +847,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .cv-interests__pills li {
   padding: 0.4rem 0.9rem;
-  border: 1px solid rgba(21, 155, 215, 0.35);
+  border: 1px solid rgba(16, 144, 203, 0.35);
   border-radius: 999px;
-  background: rgba(21, 155, 215, 0.1);
+  background: rgba(16, 144, 203, 0.1);
   font-size: 0.9375rem;
   font-weight: 600;
 
@@ -903,7 +894,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
-    border-color: rgba(21, 155, 215, 0.3);
+    border-color: rgba(16, 144, 203, 0.3);
     box-shadow: var(--molecular-shadow);
 
     html[data-theme="dark"] & {
@@ -1073,11 +1064,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cv-modern .cv-block--education {
-  border-left-color: #159BD7;
+  border-left-color: #1090CB;
 }
 
 .cv-modern .cv-block--experience {
-  border-left-color: #0E7FAE;
+  border-left-color: #0C6E9C;
 }
 
 .cv-modern .cv-block--skills {
@@ -1180,9 +1171,9 @@ h1, h2, h3, h4, h5, h6 {
 .cv-modern .cv-block--skills li {
   margin: 0;
   padding: 0.3rem 0.7rem;
-  border: 1px solid rgba(21, 155, 215, 0.35);
+  border: 1px solid rgba(16, 144, 203, 0.35);
   border-radius: 999px;
-  background: rgba(21, 155, 215, 0.10);
+  background: rgba(16, 144, 203, 0.10);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -1192,6 +1183,6 @@ html[data-theme="dark"] .cv-modern .cv-block {
 }
 
 html[data-theme="dark"] .cv-modern .cv-block--skills li {
-  border-color: rgba(21, 155, 215, 0.45);
-  background: rgba(21, 155, 215, 0.16);
+  border-color: rgba(16, 144, 203, 0.45);
+  background: rgba(16, 144, 203, 0.16);
 }
