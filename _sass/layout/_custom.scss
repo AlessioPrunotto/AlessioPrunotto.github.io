@@ -251,12 +251,20 @@ h1, h2, h3, h4, h5, h6 {
    Fixed sidebar stacking — must sit above .home-hero__content (z-index 1,
    whose box spans the full container) and below .masthead (z-index 20),
    otherwise the hero content box swallows sidebar clicks while it is
-   on screen.
+   on screen. Uses $large (925px), not $sidebar-screen-min-width (1024px),
+   to also cover the 925–1023px range where the sidebar is sticky but the
+   hero still overlaps it.
    -------------------------------------------------------------------------- */
 
-@media screen and (min-width: $sidebar-screen-min-width) {
+@include breakpoint($large) {
   .sidebar {
     z-index: 10;
+  }
+
+  // Mobile dropdown uses z-index: -1; never leak it to desktop where the
+  // link list is inline — it would paint behind and go unclickable.
+  .author__urls {
+    z-index: auto;
   }
 }
 
@@ -447,6 +455,17 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   max-width: $x-large;
   margin: 0 auto;
+  // The content box spans the full container width (see padding rule below),
+  // so its transparent left area overlaps the fixed sidebar and would swallow
+  // sidebar clicks. Let clicks pass through except on real hero controls.
+  pointer-events: none;
+
+  .home-hero__text,
+  .home-hero__stage,
+  a,
+  button {
+    pointer-events: auto;
+  }
 
   // Align the text column with #main's article column at every viewport
   // width. The sidebar is `position: fixed` at the left edge of the
