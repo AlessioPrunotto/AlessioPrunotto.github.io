@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The chemcheck preflight workflow</title>
+  <desc id="desc">A molecular dataset enters five audit areas: chemical integrity, duplicate structures, split leakage, machine-learning readiness, and chemical-space coverage. Findings are prioritized and include affected rows, evidence, and a recommended action, then exported to terminal, JSON, HTML, or JUnit.</desc>
+  <defs>
+    <style>
+      .t{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.sh{font-size:19px;font-weight:650}.b{font-size:16px}.sm{font-size:14px}.muted{fill:#64748b}.box{fill:#fff;stroke:#d8e0eb;stroke-width:2}.audit{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.arrow{stroke:#94a3b8;stroke-width:3;fill:none;marker-end:url(#arrow)}.line{stroke:#cbd5e1;stroke-width:2}.icon{fill:none;stroke:#6d5bd0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.tag-e{fill:#fee2e2}.tag-w{fill:#ffedd5}.tag-i{fill:#e0f2fe}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect width="1200" height="720" rx="24" fill="#f8fafc"/>
+  <text x="60" y="62" class="t h">A preliminary check before modeling</text>
+
+  <!-- input -->
+  <rect x="52" y="170" width="215" height="366" rx="20" class="box"/>
+  <text x="80" y="210" class="t sh">MOLECULAR DATA</text>
+  <rect x="80" y="238" width="159" height="46" rx="8" fill="#edf4ff"/><text x="96" y="266" class="t sm">ID  ·  SMILES  ·  label</text>
+  <rect x="80" y="297" width="159" height="46" rx="8" fill="#f8fafc"/><text x="96" y="325" class="t sm">m01  ·  CCO  ·  1.2</text>
+  <rect x="80" y="356" width="159" height="46" rx="8" fill="#f8fafc"/><text x="96" y="384" class="t sm">m02  ·  c1cc…  ·  2.0</text>
+  <rect x="80" y="415" width="159" height="46" rx="8" fill="#f8fafc"/><text x="96" y="443" class="t sm">m03  ·  [Na+]…  ·  1.2</text>
+  <text x="80" y="496" class="t sm muted">CSV · SDF · train/test</text>
+  <path d="M268 353 L315 353" class="arrow"/>
+
+  <!-- checks -->
+  <rect x="316" y="132" width="330" height="516" rx="22" class="audit"/>
+  <text x="344" y="174" class="t sh">FIVE AUDIT AREAS</text>
+  <g transform="translate(344 204)">
+    <rect width="274" height="70" rx="14" class="box"/><path d="M25 37 l10 10 21-25" class="icon"/><text x="76" y="31" class="t sh">Chemical integrity</text><text x="76" y="53" class="t sm muted">validity, charge, stereo</text>
+  </g>
+  <g transform="translate(344 286)">
+    <rect width="274" height="70" rx="14" class="box"/><rect x="20" y="20" width="27" height="27" rx="4" class="icon"/><rect x="31" y="31" width="27" height="27" rx="4" class="icon"/><text x="76" y="31" class="t sh">Duplicate structures</text><text x="76" y="53" class="t sm muted">exact, salt, tautomer, near</text>
+  </g>
+  <g transform="translate(344 368)">
+    <rect width="274" height="70" rx="14" class="box"/><path d="M18 21 h42 M39 21 v36 M18 57 h42" class="icon"/><path d="M24 33 l11 7-11 7 M54 33 l-11 7 11 7" class="icon"/><text x="76" y="31" class="t sh">Split leakage</text><text x="76" y="53" class="t sm muted">identity, analogues, scaffolds</text>
+  </g>
+  <g transform="translate(344 450)">
+    <rect width="274" height="70" rx="14" class="box"/><path d="M18 52 L30 38 L41 44 L58 20" class="icon"/><text x="76" y="31" class="t sh">ML readiness</text><text x="76" y="53" class="t sm muted">conflicts, shift, outliers</text>
+  </g>
+  <g transform="translate(344 532)">
+    <rect width="274" height="70" rx="14" class="box"/><circle cx="27" cy="27" r="6" class="icon"/><circle cx="51" cy="42" r="6" class="icon"/><circle cx="24" cy="53" r="6" class="icon"/><line x1="31" y1="31" x2="46" y2="39" class="icon"/><text x="76" y="31" class="t sh">Chemical space</text><text x="76" y="53" class="t sm muted">coverage, bias, isolation</text>
+  </g>
+  <path d="M647 353 L694 353" class="arrow"/>
+
+  <!-- findings -->
+  <rect x="695" y="170" width="280" height="366" rx="20" class="box"/>
+  <text x="723" y="210" class="t sh">PRIORITIZED FINDINGS</text>
+  <rect x="723" y="238" width="68" height="28" rx="14" class="tag-e"/><text x="757" y="257" text-anchor="middle" class="t sm" fill="#991b1b">ERROR</text>
+  <text x="806" y="257" class="t b">identity leakage</text>
+  <line x1="723" y1="286" x2="947" y2="286" class="line"/>
+  <rect x="723" y="306" width="82" height="28" rx="14" class="tag-w"/><text x="764" y="325" text-anchor="middle" class="t sm" fill="#9a3412">WARNING</text>
+  <text x="820" y="325" class="t b">near-duplicates</text>
+  <line x1="723" y1="354" x2="947" y2="354" class="line"/>
+  <rect x="723" y="374" width="54" height="28" rx="14" class="tag-i"/><text x="750" y="393" text-anchor="middle" class="t sm" fill="#075985">INFO</text>
+  <text x="792" y="393" class="t b">isolated molecules</text>
+  <rect x="723" y="434" width="224" height="72" rx="12" fill="#f8fafc"/>
+  <text x="739" y="458" class="t sm">✓ affected row IDs</text><text x="739" y="478" class="t sm">✓ evidence examples</text><text x="739" y="498" class="t sm">✓ recommended next action</text>
+  <path d="M976 353 L1022 353" class="arrow"/>
+
+  <!-- outputs -->
+  <rect x="1023" y="170" width="125" height="366" rx="20" class="box"/>
+  <text x="1085" y="210" text-anchor="middle" class="t sh">OUTPUTS</text>
+  <rect x="1043" y="240" width="85" height="48" rx="10" fill="#eef2ff"/><text x="1085" y="270" text-anchor="middle" class="t b">Terminal</text>
+  <rect x="1043" y="304" width="85" height="48" rx="10" fill="#eef2ff"/><text x="1085" y="334" text-anchor="middle" class="t b">JSON</text>
+  <rect x="1043" y="368" width="85" height="48" rx="10" fill="#eef2ff"/><text x="1085" y="398" text-anchor="middle" class="t b">HTML</text>
+  <rect x="1043" y="432" width="85" height="48" rx="10" fill="#eef2ff"/><text x="1085" y="462" text-anchor="middle" class="t b">JUnit</text>
+  <text x="1085" y="510" text-anchor="middle" class="t sm muted">human + CI</text>
+
+  <rect x="312" y="671" width="576" height="32" rx="16" fill="#e8e4ff"/>
+  <text x="600" y="693" text-anchor="middle" class="t sm">chemcheck reports evidence; the scientist decides what the finding means.</text>
+</svg>
