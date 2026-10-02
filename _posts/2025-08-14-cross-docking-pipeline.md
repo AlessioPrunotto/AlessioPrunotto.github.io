@@ -1,7 +1,7 @@
 ---
 title: 'A Pipeline for Structure-Aware Docking'
-date: 2025-08-14
-permalink: /posts/2025/08/cross-docking-pipeline/
+date: 2199-08-14
+permalink: /posts/2199/08/cross-docking-pipeline/
 tags:
   - cross-docking
   - structural diversity
