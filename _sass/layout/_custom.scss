@@ -740,6 +740,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.blog-list .archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+.blog-list .archive__item-title a:first-child {
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--molecular-cyan-dark);
+    text-decoration: none;
+
+    html[data-theme="dark"] & {
+      color: var(--molecular-cyan);
+    }
+  }
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(20px);
