@@ -11,8 +11,6 @@ tags:
 ---
 
 
-# Before You Trust the Model, Check the Molecules
-
 Modern molecular machine learning can make a weak dataset look remarkably convincing.
 
 Even though your model trains successfully, cross-validation scores look competitive and the test set confirms the result, it may still all be due to duplicated compounds, inconsistent structures, conflicting measurements, or test molecules that are nearly identical to molecules seen during training.
