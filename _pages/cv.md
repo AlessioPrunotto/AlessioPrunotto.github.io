@@ -103,24 +103,40 @@ Paris, France
 
 *Methods*
 
-- Workflow automation and reproducible analysis
-- Data visualisation and HPC/GPU computing
+- Workflow automation
+- Reproducible analysis
+- Data visualisation
+- HPC/GPU computing
 
 *Tools*
 
-- Python, Bash, SQL, Git, Linux, AWS, SLURM, conda
+- Python
+- Bash
+- SQL
+- Git
+- Linux
+- AWS
+- SLURM
+- conda
 
 **Chemical data science**
 
 *Methods*
 
-- Machine learning and hybrid physics-based / ML modelling
-- Molecular property, reactivity and solubility prediction
-- Cheminformatics and compound prioritisation
+- Machine learning
+- hybrid physics-based / ML modelling
+- Molecular properties and reactivity predictions
+- Cheminformatics
 
 *Tools*
 
-- RDKit, ChemAxon, scikit-learn, XGBoost, pandas, NumPy, SciPy
+- RDKit
+- ChemAxon
+- scikit-learn
+- XGBoost
+- pandas
+- NumPy
+- SciPy
 
 **Computational chemistry**
 
@@ -132,7 +148,16 @@ Paris, France
 
 *Tools*
 
-- Schrödinger, GROMACS, AmberTools, Rosetta, AutoDock Vina, SeeSAR, PyMOL, VMD, xtb, Gaussian
+- Schrödinger
+- GROMACS
+- AmberTools
+- Rosetta
+- AutoDock Vina
+- SeeSAR
+- PyMOL
+- VMD
+- xtb
+- Gaussian
 </section>
 
 <section class="cv-block cv-block--languages" markdown="1">
