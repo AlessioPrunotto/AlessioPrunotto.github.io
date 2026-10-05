@@ -12,49 +12,19 @@ redirect_from:
 
 <header class="cv-lead">
   <h1 class="cv-lead__name">Alessio Prunotto</h1>
-  <p class="cv-lead__role">Computational Chemist · Chemical Data Scientist</p>
+  <p class="cv-lead__role">Senior Computational Chemist · Chemical Data Scientist</p>
   <p class="cv-lead__contact">
     {% if site.author.location %}{{ site.author.location }}{% endif %}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">Email</a>{% endif %}{% if site.author.linkedin %} · <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}{% if site.author.github %} · <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
   </p>
-  <a class="btn btn--primary" href="{{ base_path }}/files/cv.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
+  <a class="btn btn--primary" href="mailto:{{ site.author.email }}">Contact me for a full version of CV</a>
 </header>
 
-<section class="cv-interests" aria-label="Research interests">
-  <h2 class="cv-interests__label">Research interests</h2>
-  <ul class="cv-interests__pills">
-    <li>Computational Chemistry</li>
-    <li>Chemoinformatics</li>
-    <li>Machine Learning</li>
-    <li>Drug Discovery</li>
-    <li>Molecular Design</li>
-  </ul>
-</section>
-
-<section class="cv-highlights" aria-label="Highlights">
-  <h2 class="cv-highlights__label">Highlights</h2>
-  <div class="cv-highlights__grid">
-    <article class="highlight-card">
-      <!-- <p class="highlight-card__stat">. </p> -->
-      <h3 class="highlight-card__title">Industry + academic experience</h3>
-      <p class="highlight-card__text">Experience spanning pharmaceutical R&D, computational chemistry and academic research.</p>
-    </article>
-    <article class="highlight-card">
-      <h3 class="highlight-card__title">Chemical AI / automation</h3>
-      <p class="highlight-card__text">Development of predictive and automated computational workflows.</p>
-    </article>
-    <article class="highlight-card">
-      <h3 class="highlight-card__title">Drug discovery</h3>
-      <p class="highlight-card__text">Experience across molecular modeling, docking, molecular dynamics and computational screening.</p>
-    </article>
-    <article class="highlight-card">
-      <!-- <p class="highlight-card__stat">{{ site.publications.size }}</p> -->
-      <h3 class="highlight-card__title">{{ site.publications.size }} publications</h3>
-      <p class="highlight-card__text">Peer-reviewed research in computational chemistry and drug discovery.</p>
-    </article>
-  </div>
-</section>
-
 <div class="cv-modern" markdown="1">
+
+<section class="cv-block cv-block--summary" aria-label="Professional summary" markdown="1">
+  <h2>Professional Summary</h2>
+  <p>Computational chemist and chemical data scientist developing physics-based and machine-learning methods for molecular property prediction, compound prioritisation and drug discovery. Experienced in translating chemical data and scientific questions into reproducible computational workflows, models and tools for interdisciplinary teams.</p>
+</section>
 
 <section class="cv-block cv-block--experience" markdown="1">
 ## Work Experience
@@ -62,45 +32,43 @@ redirect_from:
 ### Chemical Data Scientist — [Synple Chem](https://www.synplechem.com/) <span class="cv-date">Aug 2025 – Present</span>
 Zurich, Switzerland
 
-- **Build and validate** predictive models for chemical reactivity and solubility, physics-based and ML-based
-- **Integrate** model outputs into automated synthesis workflows
+- **Develop** hybrid physics-based and machine-learning models for reaction feasibility and compound properties
+- **Automate** reaction prioritisation and identify compounds unsuitable for synthesis
+- **Collaborate** with synthetic chemists to translate experimental needs into data models and scientific tools
 
 ### Drug Hunter / Computational Chemist — [Aqemia](https://www.aqemia.com/) <span class="cv-date">Feb 2022 – Jul 2025</span>
 Paris, France
 
-- **Contributed to** early-stage drug discovery programs using protein modeling, molecular docking and molecular dynamics
-- **Led initiatives** to automate and scale computational analyses, including MD trajectory analysis and ligand-pose assessment
-- **Developed** computational workflows for evaluating protein–ligand interactions and ligand binding poses
+- **Applied** molecular modelling to structure-based drug-discovery programs and generated hypotheses for medicinal-chemistry design
+- **Automated** molecular-dynamics trajectory analysis, ligand-pose assessment and docking-result workflows
+- **Connected** medicinal chemists and software engineers, translating research needs into computational tools
+- **Mentored** colleagues and interns in computational chemistry and cheminformatics
 
 ### Postdoctoral Researcher <span class="cv-date">Nov 2020 – Jan 2022</span>
 [Computer-aided Molecular Engineering group](https://www.unil.ch/dof/en/home/menuinst/research-labs/zoete.html) · Lausanne, Switzerland · Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
 
-- **Developed** interaction-fingerprint methods to post-process docking outputs and assess ligand-pose quality
-- **Built** a Rosetta-based scoring method for pMHC specificity towards T-cell receptors
+- **Developed** interaction-fingerprint and Rosetta-based scoring methods to assess docking poses and peptide–MHC specificity toward T-cell receptors
 
-### Graduate Researcher <span class="cv-date">Jul 2015 – Oct 2020</span>
+### Doctoral Researcher <span class="cv-date">Jul 2015 – Oct 2020</span>
 [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland · Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
-- **Characterized** membrane-binding mechanisms of two peripheral membrane proteins (NDM-1, Golph3), identifying candidate allosteric sites
-- **Proposed** experimentally testable hypotheses from simulation data across several collaborative projects
+- **Elucidated** the membrane-binding mechanism of NDM-1 and investigated candidate allosteric sites in membrane-associated proteins
+- **Explained** experimental observations related to ligand selectivity and viral-capsid thermostability through molecular simulations
 
 ### Research Assistant <span class="cv-date">Jan 2015 – Jun 2015</span>
 [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland
 
-Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
-
-- **Characterized** aggregating properties of 
+- **Evaluated** protein aggregation through molecular-dynamics simulations
 
 ### Research Assistant <span class="cv-date">Jan 2013 – Dec 2014</span>
 [Computational Biophysics group](https://m3.dti.supsi.ch/), University of Applied Sciences and Arts of Southern Switzerland · Lugano, Switzerland · Supervisor: [Prof. Andrea Danani](https://www.supsi.ch/en/andrea-danani)
 
-- **Contributed to** multiple structure-based drug discovery projects, including TLR7 mechanism-of-action studies
-- **Supervised** a potency-optimization project for a GHS-R inverse agonist
+- **Contributed** to structure-based drug-discovery projects targeting TLR7 and GHS-R
 
 ### Visiting Student <span class="cv-date">Apr 2012 – Oct 2012</span>
 [Li Ka Shing Institute of Virology](https://www.ualberta.ca/en/li-ka-shing-institute-virology/index.html), University of Alberta · Edmonton, Canada · Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/mhoughto), [Prof. Jack Tuszynski](https://apps.ualberta.ca/directory/person/jackt)
 
-- **Automated** the search for NS5B (hepatitis C polymerase) inhibitors via docking, homology modelling, MD and free-energy calculations (Master's final project)
+- **Developed** a docking and molecular-dynamics workflow to identify potential hepatitis C NS5B inhibitors
 </section>
 
 <section class="cv-block cv-block--education" markdown="1">
@@ -109,7 +77,7 @@ Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?la
 <div class="edu-row">
   <p class="edu-degree">Ph.D.</p>
   <div class="edu-detail">
-    <p class="edu-field">Computational Biology / Computational Chemistry</p>
+    <p class="edu-field">Computational Chemistry</p>
     <p class="edu-org"><a href="https://www.epfl.ch/">EPFL</a> · Lausanne, Switzerland</p>
   </div>
 </div>
@@ -130,42 +98,33 @@ Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?la
 </section>
 
 <section class="cv-block cv-block--skills" markdown="1">
-## Expertise
+## Technical Skills
+
+**Scientific computing**
+
+- Workflow automation and reproducible analysis
+- Data visualisation and HPC/GPU computing
+- Python, Bash, SQL, Git, Linux, AWS, SLURM, conda
+
+**Chemical data science**
+
+- Machine learning and hybrid physics-based / ML modelling
+- Molecular property, reactivity and solubility prediction
+- Cheminformatics and compound prioritisation
+- RDKit, ChemAxon, scikit-learn, XGBoost, pandas, NumPy, SciPy
 
 **Computational chemistry**
 
-- Molecular docking
-- Molecular dynamics
-- Protein modeling
-- Structure-based drug design
+- Structure-based drug design, molecular docking and virtual screening
+- Molecular dynamics and binding free-energy calculations
+- DFT and semi-empirical methods
+- Schrödinger, GROMACS, AmberTools, Rosetta, AutoDock Vina, SeeSAR, PyMOL, VMD, xtb, Gaussian
+</section>
 
-**Cheminformatics & data science**
+<section class="cv-block cv-block--languages" markdown="1">
+## Languages
 
-- Chemical data analysis
-- Molecular representations
-- Machine learning
-- Predictive modeling
-
-**Drug discovery**
-
-- Virtual screening
-- Protein–ligand interactions
-- Molecular design
-
-**Programming & tools**
-
-- Python
-- RDKit
-- PyTorch
-- scikit-learn
-- pandas
-- NumPy
-- AutoDock Vina
-- GROMACS
-- Rosetta
-- Git
-- Linux
-- SLURM
+English (C2) · French (C1) · Italian (Native) · Spanish (A2)
 </section>
 
 </div>
