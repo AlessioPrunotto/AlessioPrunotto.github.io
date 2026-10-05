@@ -1,5 +1,6 @@
 # PR / push validation: reproducible Ruby + Node install, JS bundle, strict
 # Jekyll build, and HTML link/image audit. Mirrors README local dev steps.
+# Temporary comment
 name: CI
 
 on:
