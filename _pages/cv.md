@@ -101,8 +101,6 @@ Paris, France
 
 **Scientific computing**
 
-*Methods*
-
 - Workflow automation
 - Reproducible analysis
 - Data visualisation
@@ -121,11 +119,10 @@ Paris, France
 
 **Chemical data science**
 
-*Methods*
-
 - Machine learning
-- hybrid physics-based / ML modelling
-- Molecular properties and reactivity predictions
+- Hybrid physics-based / ML modelling
+- Molecular property prediction
+- Reactivity prediction
 - Cheminformatics
 
 *Tools*
@@ -140,11 +137,12 @@ Paris, France
 
 **Computational chemistry**
 
-*Methods*
-
-- Structure-based drug design, molecular docking and virtual screening
-- Molecular dynamics and binding free-energy calculations
-- DFT and semi-empirical methods
+- Structure-based drug design
+- Virtual screening
+- Docking
+- Molecular dynamics
+- Binding free-energy calculations
+- DFT / semi-empirical methods
 
 *Tools*
 
