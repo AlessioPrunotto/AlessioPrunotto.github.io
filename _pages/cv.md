@@ -101,22 +101,37 @@ Paris, France
 
 **Scientific computing**
 
+*Methods*
+
 - Workflow automation and reproducible analysis
 - Data visualisation and HPC/GPU computing
+
+*Tools*
+
 - Python, Bash, SQL, Git, Linux, AWS, SLURM, conda
 
 **Chemical data science**
 
+*Methods*
+
 - Machine learning and hybrid physics-based / ML modelling
 - Molecular property, reactivity and solubility prediction
 - Cheminformatics and compound prioritisation
+
+*Tools*
+
 - RDKit, ChemAxon, scikit-learn, XGBoost, pandas, NumPy, SciPy
 
 **Computational chemistry**
 
+*Methods*
+
 - Structure-based drug design, molecular docking and virtual screening
 - Molecular dynamics and binding free-energy calculations
 - DFT and semi-empirical methods
+
+*Tools*
+
 - Schrödinger, GROMACS, AmberTools, Rosetta, AutoDock Vina, SeeSAR, PyMOL, VMD, xtb, Gaussian
 </section>
 
