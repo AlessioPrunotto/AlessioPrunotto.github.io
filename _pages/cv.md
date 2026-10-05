@@ -101,6 +101,8 @@ Paris, France
 
 **Scientific computing**
 
+*Core skills*
+
 - Workflow automation
 - Reproducible analysis
 - Data visualisation
@@ -119,6 +121,8 @@ Paris, France
 
 **Chemical data science**
 
+*Core skills*
+
 - Machine learning
 - Hybrid physics-based / ML modelling
 - Molecular property prediction
@@ -136,6 +140,8 @@ Paris, France
 - SciPy
 
 **Computational chemistry**
+
+*Core skills*
 
 - Structure-based drug design
 - Virtual screening
