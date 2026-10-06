@@ -16,7 +16,7 @@ redirect_from:
   <p class="cv-lead__contact">
     {% if site.author.location %}{{ site.author.location }}{% endif %}{% if site.author.email %} · <a href="mailto:{{ site.author.email }}">Email</a>{% endif %}{% if site.author.linkedin %} · <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}{% if site.author.github %} · <a href="https://github.com/{{ site.author.github }}">GitHub</a>{% endif %}{% if site.author.googlescholar %} · <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
   </p>
-  <a class="btn btn--primary" href="mailto:{{ site.author.email }}">Detailed CV available on request</a>
+  <a class="btn btn--primary" href="mailto:{{ site.author.email }}">Full CV available upon request</a>
 </header>
 
 <div class="cv-modern" markdown="1">
