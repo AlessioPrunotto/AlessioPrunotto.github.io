@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV (short version)"
+title: "CV"
 permalink: /cv/
 author_profile: false
 hide_title: true
