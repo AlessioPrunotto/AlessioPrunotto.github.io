@@ -32,42 +32,40 @@ redirect_from:
 ### Chemical Data Scientist — [Synple Chem](https://www.synplechem.com/) <span class="cv-date">Aug 2025 – Present</span>
 Zurich, Switzerland
 
-- **Develop** hybrid physics-based and machine-learning models for reaction feasibility and compound properties
-- **Automate** reaction prioritisation and identify compounds unsuitable for synthesis
-- **Collaborate** with synthetic chemists to translate experimental needs into data models and scientific tools
+- Hybrid physics-based and machine-learning models for reaction feasibility and compound properties
+- Automate reaction prioritisation and identify compounds unsuitable for synthesis
 
 ### Drug Hunter / Computational Chemist — [Aqemia](https://www.aqemia.com/) <span class="cv-date">Feb 2022 – Jul 2025</span>
 Paris, France
 
-- **Applied** molecular modelling to structure-based drug-discovery programs and generated hypotheses for medicinal-chemistry design
-- **Automated** molecular-dynamics trajectory analysis, ligand-pose assessment and docking-result workflows
-- **Connected** medicinal chemists and software engineers, translating research needs into computational tools
+- Structure-based drug-discovery projects
+- Automation of molecular-dynamics trajectory analysis and ligand-pose assessment
 
 ### Postdoctoral Researcher <span class="cv-date">Nov 2020 – Jan 2022</span>
 [Computer-aided Molecular Engineering group](https://www.unil.ch/dof/en/home/menuinst/research-labs/zoete.html) · Lausanne, Switzerland · Supervisor: [Prof. Vincent Zoete](https://www.sib.swiss/vincent-zoete-group)
 
-<!-- - **Developed** interaction-fingerprint and Rosetta-based scoring methods to assess docking poses and peptide–MHC specificity toward T-cell receptors -->
+- Developed methods to assess protein-peptide specificity
 
 ### Doctoral Researcher <span class="cv-date">Jul 2015 – Oct 2020</span>
 [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland · Supervisor: [Prof. Matteo Dal Peraro](https://people.epfl.ch/matteo.dalperaro?lang=en)
 
-<!-- - **Elucidated** the membrane-binding mechanism of NDM-1 and investigated candidate allosteric sites in membrane-associated proteins
-- **Explained** experimental observations related to ligand selectivity and viral-capsid thermostability through molecular simulations -->
+- Elucidated mechanism of action of drug-resistant enzyme NDM-1
+- Explained experimental observations related to ligand selectivity and viral-capsid thermostability through molecular simulations
 
 ### Research Assistant <span class="cv-date">Jan 2015 – Jun 2015</span>
 [Laboratory for Biomolecular Modeling](https://www.epfl.ch/labs/lbm/), EPFL · Lausanne, Switzerland
 
-<!-- - **Evaluated** protein aggregation through molecular-dynamics simulations -->
+- Protein aggregation studies through molecular simulations
 
 ### Research Assistant <span class="cv-date">Jan 2013 – Dec 2014</span>
 [Computational Biophysics group](https://m3.dti.supsi.ch/), University of Applied Sciences and Arts of Southern Switzerland · Lugano, Switzerland · Supervisor: [Prof. Andrea Danani](https://www.supsi.ch/en/andrea-danani)
 
-<!-- - **Contributed** to structure-based drug-discovery projects targeting TLR7 and GHS-R -->
+- Structure-based drug-discovery projects targeting TLR7 and GHS-R
 
 ### Visiting Student <span class="cv-date">Apr 2012 – Oct 2012</span>
 [Li Ka Shing Institute of Virology](https://www.ualberta.ca/en/li-ka-shing-institute-virology/index.html), University of Alberta · Edmonton, Canada · Supervisors: [Prof. Michael Houghton](https://apps.ualberta.ca/directory/person/mhoughto) (Nobel prize in Medicine 2020), [Prof. Jack Tuszynski](https://apps.ualberta.ca/directory/person/jackt)
 
-<!-- - **Developed** a docking and molecular-dynamics workflow to identify potential hepatitis C NS5B inhibitors -->
+- Identified potential inhibitors of hepatitis C NS5B enzyme
 </section>
 
 <section class="cv-block cv-block--education" markdown="1">
