@@ -1,6 +1,6 @@
 # Jekyll 4 dev image. Ruby matches .ruby-version (3.3.x); Node 20 matches
 # package.json engines. Rebuild after changing Gemfile/package.json.
-FROM ruby:3.3-slim-bookworm
+FROM ruby:4.0-slim-bookworm
 
 # System deps: compiler toolchain for native gems + Node 20 for npm scripts.
 # NodeSource setup needs curl/ca-certificates/gnupg; git for Bundler git sources.
