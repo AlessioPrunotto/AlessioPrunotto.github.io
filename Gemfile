@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Deployment builds with `bundle exec jekyll build` in GitHub Actions.
 gem 'jekyll', '~> 4.3'
 gem 'jekyll-sass-converter', '~> 3.0'
-gem 'kramdown', '~> 2.4'
+gem 'kramdown', '~> 2.6'
 gem 'kramdown-parser-gfm'
 gem 'webrick'
 gem 'faraday-retry'
